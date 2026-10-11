@@ -1,0 +1,4 @@
+# LF everywhere so scripts like mvnw run on macOS/Linux; Windows scripts keep CRLF.
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf

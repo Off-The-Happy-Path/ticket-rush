@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Java / Maven
+target/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+
+# Locust reports
+load-tests/reports/
