@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ticket-rush API tests">
+    <test name="Functional">
+        <classes>
+            <class name="dev.ticketrush.EventsTest"/>
+            <class name="dev.ticketrush.ReservationsTest"/>
+            <class name="dev.ticketrush.OrdersTest"/>
+        </classes>
+    </test>
+</suite>
