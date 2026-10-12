@@ -13,10 +13,12 @@ python -m venv .venv
 .venv/Scripts/activate        # Windows
 source .venv/bin/activate     # macOS / Linux
 pip install -r requirements.txt
-uvicorn app.main:app --port 8000
+uvicorn app.main:app --port 8000 --log-level warning
 ```
 
 Open http://localhost:8000/docs for the interactive API docs.
+
+`--log-level warning` turns off the per-request log. Under load, printing every request costs real CPU, especially in a Windows console, so leave it off when you measure. All numbers in the videos were measured this way.
 
 ## Settings
 
@@ -33,13 +35,13 @@ Set these as environment variables before starting the server.
 PowerShell:
 
 ```powershell
-$env:OVERSELL_BUG="true"; $env:ADMIN_ENABLED="true"; uvicorn app.main:app --port 8000
+$env:OVERSELL_BUG="true"; $env:ADMIN_ENABLED="true"; uvicorn app.main:app --port 8000 --log-level warning
 ```
 
 macOS / Linux:
 
 ```bash
-OVERSELL_BUG=true ADMIN_ENABLED=true uvicorn app.main:app --port 8000
+OVERSELL_BUG=true ADMIN_ENABLED=true uvicorn app.main:app --port 8000 --log-level warning
 ```
 
 ## Endpoints

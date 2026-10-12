@@ -21,8 +21,8 @@ pip install -r requirements.txt
 Start the API with short seat holds (run this in `../demo-api`, see its [README](../demo-api/README.md)):
 
 ```bash
-HOLD_SECONDS=2 uvicorn app.main:app --port 8000                # macOS / Linux / Git Bash
-$env:HOLD_SECONDS="2"; uvicorn app.main:app --port 8000        # PowerShell
+HOLD_SECONDS=2 uvicorn app.main:app --port 8000 --log-level warning          # macOS / Linux / Git Bash
+$env:HOLD_SECONDS="2"; uvicorn app.main:app --port 8000 --log-level warning  # PowerShell
 ```
 
 Why 2 seconds: `Fan` reserves seats but never pays. With the default 5-minute holds, every seat on the event is held within the first minute. After that each reservation is a quick `409`, and the `/reservations` row looks about 50 ms faster than it really is. With 2-second holds, seats keep coming free, even at 3,000 users. A reset before the run doesn't help: the seats run out again within seconds.
