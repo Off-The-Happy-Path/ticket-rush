@@ -44,6 +44,17 @@ Use `127.0.0.1`, not `localhost`. On Windows, `localhost` tries IPv6 first, and 
 
 A `409 seat_not_available` counts as success: during a sale, "someone else got it" is a normal answer.
 
+## In CI
+
+Locust has no built-in pass or fail on latency. Run it headless with `--csv`, then let `check_p95.py` fail the build when the 95th percentile is above your limit:
+
+```bash
+locust -f locustfile.py --headless -u 500 -r 50 --run-time 5m --csv results --host http://127.0.0.1:8000
+python check_p95.py results_stats.csv 500
+```
+
+[`.github/workflows/load-test.yml`](../.github/workflows/load-test.yml) does exactly this on GitHub Actions. It starts the API with `HOLD_SECONDS=2` and only runs when you trigger it by hand from the Actions tab.
+
 ## The ticket rush
 
 The API must run with `ADMIN_ENABLED=true`. The test resets the data, opens the sale 15 seconds after it starts, and checks `/admin/report` when it stops.

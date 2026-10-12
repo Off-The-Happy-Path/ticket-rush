@@ -1,0 +1,30 @@
+name: Load test
+
+on:
+  workflow_dispatch:   # run it by hand from the Actions tab
+
+jobs:
+  load-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Start the API
+        working-directory: demo-api
+        run: |
+          pip install -r requirements.txt
+          HOLD_SECONDS=2 uvicorn app.main:app --port 8000 --log-level warning &
+          sleep 3
+
+      - name: Run Locust
+        working-directory: load-tests
+        run: |
+          pip install -r requirements.txt
+          locust -f locustfile.py --headless -u 500 -r 50 --run-time 5m --csv results --host http://127.0.0.1:8000
+
+      - name: Check p95
+        working-directory: load-tests
+        run: python check_p95.py results_stats.csv 500
