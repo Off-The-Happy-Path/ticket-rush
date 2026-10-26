@@ -19,6 +19,7 @@ Each video links to a git tag (`v01-locust`, `v02-...`) with the exact code show
 | Video | Code |
 | --- | --- |
 | Load Testing an API with Locust: Finding the Breaking Point | [`v01-locust`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v01-locust) |
+| Why Your API Tests Pass but Production Still Breaks | [`v02-production-gaps`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v02-production-gaps) |
 
 Everything here is fictional: the concerts, venues and traffic numbers.
 
