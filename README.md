@@ -1,6 +1,6 @@
 # ticket-rush
 
-Demo code for **Off the Happy Path**, a YouTube channel about API and performance testing.
+Demo code for **[Off the Happy Path](https://www.youtube.com/channel/UCZ0jt4_8YMm68yZ4iPDJb3g)**, a YouTube channel about API and performance testing.
 
 The system under test is a concert-ticketing API: tickets go on sale at 10:00 and thousands of fans hit Buy in the same second. It has a switchable overselling bug, so you can watch a load test catch two fans buying the same seat.
 
