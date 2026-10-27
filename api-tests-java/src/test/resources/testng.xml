@@ -6,6 +6,7 @@
             <class name="dev.ticketrush.ReservationsTest"/>
             <class name="dev.ticketrush.OrdersTest"/>
             <class name="dev.ticketrush.ConcurrencyTest"/>
+            <class name="dev.ticketrush.SecondFanTest"/>
         </classes>
     </test>
 </suite>

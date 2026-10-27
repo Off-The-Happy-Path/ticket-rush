@@ -1,0 +1,10 @@
+{
+  "name": "ticket-rush-api-tests-postman",
+  "private": true,
+  "scripts": {
+    "test": "newman run ticket-rush.postman_collection.json"
+  },
+  "devDependencies": {
+    "newman": "6.2.3"
+  }
+}

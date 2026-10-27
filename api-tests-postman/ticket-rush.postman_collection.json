@@ -1,0 +1,114 @@
+{
+  "info": {
+    "name": "ticket-rush",
+    "description": "The video 3 test: a second fan cannot take a held seat. Run the requests in order (Collection Runner or Newman). Needs the API running with ADMIN_ENABLED=true.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8000" }
+  ],
+  "item": [
+    {
+      "name": "1. Fan 1 reserves B-7",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "// Start from fresh data, like the Java tests do",
+              "pm.sendRequest({",
+              "    url: pm.variables.get(\"baseUrl\") + \"/admin/reset\",",
+              "    method: \"POST\",",
+              "    header: { \"Content-Type\": \"application/json\" },",
+              "    body: { mode: \"raw\", raw: \"{}\" }",
+              "});"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"201 and a reservation id\", () => {",
+              "    pm.response.to.have.status(201);",
+              "    pm.expect(pm.response.json().id).to.match(/^res_/);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"event_id\": 2,\n    \"seat_id\": \"B-7\",\n    \"customer_id\": \"fan-1\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/reservations",
+          "host": ["{{baseUrl}}"],
+          "path": ["reservations"]
+        }
+      }
+    },
+    {
+      "name": "2. B-7 leaves the available list",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"seat left the available list\", () => {",
+              "    const ids = pm.response.json().seats.map(s => s.seat_id);",
+              "    pm.expect(ids).to.not.include(\"B-7\");",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/events/2/seats?status=available",
+          "host": ["{{baseUrl}}"],
+          "path": ["events", "2", "seats"],
+          "query": [{ "key": "status", "value": "available" }]
+        }
+      }
+    },
+    {
+      "name": "3. Fan 2 gets 409",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"second fan gets 409\", () => {",
+              "    pm.response.to.have.status(409);",
+              "    pm.expect(pm.response.json().error).to.eql(\"seat_not_available\");",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"event_id\": 2,\n    \"seat_id\": \"B-7\",\n    \"customer_id\": \"fan-2\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/reservations",
+          "host": ["{{baseUrl}}"],
+          "path": ["reservations"]
+        }
+      }
+    }
+  ]
+}

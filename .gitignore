@@ -14,3 +14,8 @@ target/
 
 # Locust reports
 load-tests/reports/
+
+# Node (Newman, Playwright)
+node_modules/
+test-results/
+playwright-report/

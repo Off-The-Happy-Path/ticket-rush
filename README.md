@@ -8,6 +8,8 @@ The system under test is a concert-ticketing API: tickets go on sale at 10:00 an
 | --- | --- |
 | [`demo-api/`](demo-api/) | The ticketing API (Python, FastAPI) |
 | [`api-tests-java/`](api-tests-java/) | Functional API tests (Java, TestNG, REST Assured) |
+| [`api-tests-postman/`](api-tests-postman/) | The video 3 test as a Postman collection, run with Newman |
+| [`api-tests-playwright/`](api-tests-playwright/) | The video 3 test with Playwright (TypeScript) |
 | [`load-tests/`](load-tests/) | Locust load tests: normal traffic and the ticket rush |
 
 ```bash
