@@ -22,6 +22,7 @@ Each video links to a git tag (`v01-locust`, `v02-...`) with the exact code show
 | --- | --- |
 | Load Testing an API with Locust: Finding the Breaking Point | [`v01-locust`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v01-locust) |
 | Why Your API Tests Pass but Production Still Breaks | [`v02-production-gaps`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v02-production-gaps) |
+| REST Assured vs Postman vs Playwright: Which to Learn in 2027 | [`v03-three-tools`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v03-three-tools) |
 
 Everything here is fictional: the concerts, venues and traffic numbers.
 
