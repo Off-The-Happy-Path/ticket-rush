@@ -5,7 +5,7 @@ Locust load tests for the ticket-rush API.
 | File | Scenario | Used in |
 | --- | --- | --- |
 | `locustfile.py` | `Fan`: a normal mix. Browse events 5×, check seats 3×, reserve 1× | Video 1 |
-| `ticket_rush.py` | `RushFan`: the sale opens and everyone grabs the best seats of the 120-seat show. Fails the run if any seat is sold twice | The 10:00 sale video |
+| `ticket_rush.py` | `RushFan`: the sale opens and everyone grabs the best seats of the 120-seat show. Fails the run if any seat is sold twice | Video 4 (and video 2) |
 
 ## Setup
 
