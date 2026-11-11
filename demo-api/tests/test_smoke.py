@@ -1,3 +1,5 @@
+import time
+
 from fastapi.testclient import TestClient
 
 from app.config import settings
@@ -69,6 +71,13 @@ def test_unknown_seat_returns_404(client):
     assert response.json() == {"error": "seat_not_found", "message": "Seat Z-99 does not exist"}
 
 
+def test_freeze_blocks_the_api_for_that_long(client):
+    started = time.monotonic()
+    response = client.post("/admin/freeze", params={"seconds": 0.2})
+    assert response.json() == {"frozen_for": 0.2}
+    assert time.monotonic() - started >= 0.2
+
+
 def test_admin_endpoints_are_never_in_public_docs(client):
     assert not any(path.startswith("/admin") for path in client.get("/openapi.json").json()["paths"])
 
@@ -77,3 +86,4 @@ def test_admin_endpoints_do_not_exist_when_disabled(monkeypatch):
     monkeypatch.setattr(settings, "admin_enabled", False)
     with TestClient(create_app()) as client:
         assert client.get("/admin/report").status_code == 404
+        assert client.post("/admin/freeze").status_code == 404

@@ -1,4 +1,5 @@
 """Test helpers. Mounted only when ADMIN_ENABLED=true. Real systems never expose these."""
+import time
 from collections import defaultdict
 
 from fastapi import APIRouter
@@ -43,3 +44,9 @@ async def report() -> Report:
         events=event_reports,
         duplicate_sales_total=sum(r.duplicate_sales for r in event_reports),
     )
+
+
+@router.post("/freeze")
+async def freeze(seconds: float = 3) -> dict:
+    time.sleep(seconds)    # a blocking call in async code: the whole API stops answering
+    return {"frozen_for": seconds}

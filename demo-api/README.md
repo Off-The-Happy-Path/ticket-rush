@@ -27,7 +27,7 @@ Set these as environment variables before starting the server.
 | Variable | Default | What it does |
 | --- | --- | --- |
 | `OVERSELL_BUG` | `false` | `true` removes the seat lock, so two fans can buy the same seat |
-| `ADMIN_ENABLED` | `false` | `true` adds `/admin/reset` and `/admin/report` (hidden from `/docs`) |
+| `ADMIN_ENABLED` | `false` | `true` adds `/admin/reset`, `/admin/report` and `/admin/freeze` (hidden from `/docs`) |
 | `HOLD_SECONDS` | `300` | How long a reservation holds a seat |
 | `DB_LATENCY_MS` | `50` | Simulated database round trip |
 | `PAYMENT_LATENCY_MS` | `200` | Simulated payment call |
@@ -56,6 +56,7 @@ OVERSELL_BUG=true ADMIN_ENABLED=true uvicorn app.main:app --port 8000 --log-leve
 | `GET /health` | Shows whether the bug and admin endpoints are on |
 | `POST /admin/reset` | Fresh data. Body `{"sale_opens_in_seconds": 60}` delays the sale |
 | `GET /admin/report` | Orders vs seats, and every seat sold more than once |
+| `POST /admin/freeze?seconds=3` | Blocks the whole API for that long, like a blocking call in async code |
 
 The report always adds up: `orders_confirmed = unique_seats_sold + duplicate_sales`. A seat sold three times counts as one oversold seat and two duplicate sales.
 

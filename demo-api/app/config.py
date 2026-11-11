@@ -10,7 +10,7 @@ def _flag(name: str) -> bool:
 @dataclass
 class Settings:
     oversell_bug: bool        # True = no seat lock, two fans can buy the same seat
-    admin_enabled: bool       # True = mount /admin/reset and /admin/report
+    admin_enabled: bool       # True = mount /admin/reset, /admin/report and /admin/freeze
     hold_seconds: int         # how long a reservation holds a seat
     db_latency_ms: int        # simulated database round trip
     payment_latency_ms: int   # simulated payment provider call

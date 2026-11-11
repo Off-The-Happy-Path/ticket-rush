@@ -6,6 +6,7 @@ Locust load tests for the ticket-rush API.
 | --- | --- | --- |
 | `locustfile.py` | `Fan`: a normal mix. Browse events 5×, check seats 3×, reserve 1× | Video 1 |
 | `ticket_rush.py` | `RushFan`: the sale opens and everyone grabs the best seats of the 120-seat show. Fails the run if any seat is sold twice | Video 4 (and video 2) |
+| `steady_freeze.py` | `Refresher`: steady traffic, and after 30 seconds the API freezes for 3 seconds. Shows what a load test misses while the API is stuck | Video 5 |
 
 ## Setup
 
@@ -65,6 +66,16 @@ locust -f ticket_rush.py --headless -u 500 -r 100 --run-time 40s --host http://1
 
 - `OVERSELL_BUG=false`: exactly 120 tickets for 120 seats, exit code 0.
 - `OVERSELL_BUG=true`: more tickets than seats, `OVERSOLD` in the log, exit code 1.
+
+## Steady traffic with a freeze
+
+The API must run with `ADMIN_ENABLED=true`. Thirty seconds in, the test calls `POST /admin/freeze` and the whole API stops answering for 3 seconds.
+
+```bash
+locust -f steady_freeze.py --headless -u 200 -r 100 --run-time 120s --host http://127.0.0.1:8000
+```
+
+Look at the p95 and p99 in the final table, then at the `Max` column. Every user was stuck on one request and sent nothing else until the API came back, so the report shows 200 slow requests where real visitors would have sent about a thousand more.
 
 ## A note on these numbers
 
