@@ -1,0 +1,6308 @@
+{
+ "args": {
+  "base": "http://127.0.0.1:8000",
+  "fans": 100,
+  "timeout": 1.0,
+  "seed": 42,
+  "out": "results/pct-20.json"
+ },
+ "attempts": 3,
+ "base_delay_s": 0.5,
+ "fans": [
+  {
+   "id": "fan-000",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 102
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1334,
+     "backoff_s": 0.589
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 26
+    }
+   ],
+   "reservations_seen": [
+    "res_79446a8803c4"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-001",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 119
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 216
+    }
+   ],
+   "reservations_seen": [
+    "res_2f31adbc7c79"
+   ],
+   "order_seen": "ord_eab5c3efa6ba"
+  },
+  {
+   "id": "fan-002",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 118
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 217
+    }
+   ],
+   "reservations_seen": [
+    "res_0614199fbafc"
+   ],
+   "order_seen": "ord_093856a13114"
+  },
+  {
+   "id": "fan-003",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1068,
+     "backoff_s": 0.587
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 17
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 66
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 219
+    }
+   ],
+   "reservations_seen": [
+    "res_b016f434025f"
+   ],
+   "order_seen": "ord_5d9c9e03310a"
+  },
+  {
+   "id": "fan-004",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 119
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 264
+    }
+   ],
+   "reservations_seen": [
+    "res_9a4a39e4a2c3"
+   ],
+   "order_seen": "ord_544b668d9363"
+  },
+  {
+   "id": "fan-005",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 142
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 220
+    }
+   ],
+   "reservations_seen": [
+    "res_4a9652a5715a"
+   ],
+   "order_seen": "ord_0a930e01f081"
+  },
+  {
+   "id": "fan-006",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1097,
+     "backoff_s": 0.562
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 25
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 94
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 231
+    }
+   ],
+   "reservations_seen": [
+    "res_94d4cf435f04"
+   ],
+   "order_seen": "ord_2f54f85fe30d"
+  },
+  {
+   "id": "fan-007",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 140
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 207
+    }
+   ],
+   "reservations_seen": [
+    "res_a263b4d94f2f"
+   ],
+   "order_seen": "ord_8a12cdf11126"
+  },
+  {
+   "id": "fan-008",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 137
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 211
+    }
+   ],
+   "reservations_seen": [
+    "res_65c2ff002e9c"
+   ],
+   "order_seen": "ord_0c62785ce550"
+  },
+  {
+   "id": "fan-009",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 137
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 818
+    }
+   ],
+   "reservations_seen": [
+    "res_c06303a6314f"
+   ],
+   "order_seen": "ord_1aa62b45d304"
+  },
+  {
+   "id": "fan-010",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 135
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 211
+    }
+   ],
+   "reservations_seen": [
+    "res_e19e798997ca"
+   ],
+   "order_seen": "ord_bbe4f5057cef"
+  },
+  {
+   "id": "fan-011",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 129
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 216
+    }
+   ],
+   "reservations_seen": [
+    "res_aa5159e5e276"
+   ],
+   "order_seen": "ord_32e904c17f2e"
+  },
+  {
+   "id": "fan-012",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1094,
+     "backoff_s": 0.526
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 8
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 50
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 227
+    }
+   ],
+   "reservations_seen": [
+    "res_e427c5d1e8c8"
+   ],
+   "order_seen": "ord_b0ac0aeb1ade"
+  },
+  {
+   "id": "fan-013",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 132
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 312
+    }
+   ],
+   "reservations_seen": [
+    "res_7b7668baf74e"
+   ],
+   "order_seen": "ord_79ad0d928ba9"
+  },
+  {
+   "id": "fan-014",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1094,
+     "backoff_s": 0.592
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 31
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 88
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1041,
+     "backoff_s": 0.511
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 5
+    }
+   ],
+   "reservations_seen": [
+    "res_31688d4351df"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-015",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 160
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 600
+    }
+   ],
+   "reservations_seen": [
+    "res_61c07c5dcb33"
+   ],
+   "order_seen": "ord_3783ef9ec1da"
+  },
+  {
+   "id": "fan-016",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 158
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1624,
+     "backoff_s": 0.507
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 24
+    }
+   ],
+   "reservations_seen": [
+    "res_ea3a027d95ce"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-017",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 158
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 370
+    }
+   ],
+   "reservations_seen": [
+    "res_346622482fcb"
+   ],
+   "order_seen": "ord_563bf7a8d647"
+  },
+  {
+   "id": "fan-018",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 156
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 331
+    }
+   ],
+   "reservations_seen": [
+    "res_49b0ddcaa58e"
+   ],
+   "order_seen": "ord_dd47a926d475"
+  },
+  {
+   "id": "fan-019",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1092,
+     "backoff_s": 0.522
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 7
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 50
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1025,
+     "backoff_s": 0.589
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 10
+    }
+   ],
+   "reservations_seen": [
+    "res_f2a39f2ac39d"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-020",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 150
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1047,
+     "backoff_s": 0.588
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 18
+    }
+   ],
+   "reservations_seen": [
+    "res_0a88cf6c8806"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-021",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 148
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 737
+    }
+   ],
+   "reservations_seen": [
+    "res_9ab5d3b8cdf6"
+   ],
+   "order_seen": "ord_b84aba471e4d"
+  },
+  {
+   "id": "fan-022",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 158
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1093,
+     "backoff_s": 0.581
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 5
+    }
+   ],
+   "reservations_seen": [
+    "res_0401cc6ea89a"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-023",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 146
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1365,
+     "backoff_s": 0.542
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 10
+    }
+   ],
+   "reservations_seen": [
+    "res_4cd884f5e0c8"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-024",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1116,
+     "backoff_s": 0.585
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 25
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 69
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1039,
+     "backoff_s": 0.538
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 7
+    }
+   ],
+   "reservations_seen": [
+    "res_9905a4e51667"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-025",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 171
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 744
+    }
+   ],
+   "reservations_seen": [
+    "res_d4712666535d"
+   ],
+   "order_seen": "ord_f7ba80c48dc0"
+  },
+  {
+   "id": "fan-026",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 168
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 716
+    }
+   ],
+   "reservations_seen": [
+    "res_8045151fb741"
+   ],
+   "order_seen": "ord_c437f4d53a94"
+  },
+  {
+   "id": "fan-027",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 171
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 325
+    }
+   ],
+   "reservations_seen": [
+    "res_8ccd0cfa61ae"
+   ],
+   "order_seen": "ord_7754d44eec2a"
+  },
+  {
+   "id": "fan-028",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 167
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 488
+    }
+   ],
+   "reservations_seen": [
+    "res_54f12584de97"
+   ],
+   "order_seen": "ord_13eeacb960d2"
+  },
+  {
+   "id": "fan-029",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 154
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 458
+    }
+   ],
+   "reservations_seen": [
+    "res_45c03a3482bf"
+   ],
+   "order_seen": "ord_bc51ea74d5a7"
+  },
+  {
+   "id": "fan-030",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 183
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 394
+    }
+   ],
+   "reservations_seen": [
+    "res_8ebddd88e386"
+   ],
+   "order_seen": "ord_c6ad6da422eb"
+  },
+  {
+   "id": "fan-031",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 180
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1500,
+     "backoff_s": 0.571
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 20
+    }
+   ],
+   "reservations_seen": [
+    "res_237dc5c68015"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-032",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 181
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 764
+    }
+   ],
+   "reservations_seen": [
+    "res_2e7e3034efaf"
+   ],
+   "order_seen": "ord_784dba5bc83e"
+  },
+  {
+   "id": "fan-033",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 174
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1239,
+     "backoff_s": 0.564
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 27
+    }
+   ],
+   "reservations_seen": [
+    "res_4331c047ba4e"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-034",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 173
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 736
+    }
+   ],
+   "reservations_seen": [
+    "res_925e99085641"
+   ],
+   "order_seen": "ord_6e289fa5a044"
+  },
+  {
+   "id": "fan-035",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 193
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 282
+    }
+   ],
+   "reservations_seen": [
+    "res_7ec30757f32a"
+   ],
+   "order_seen": "ord_72f34135b3b1"
+  },
+  {
+   "id": "fan-036",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 194
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1500,
+     "backoff_s": 0.58
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 23
+    }
+   ],
+   "reservations_seen": [
+    "res_8ad6a7d82dd3"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-037",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1142,
+     "backoff_s": 0.537
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 27
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 74
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 231
+    }
+   ],
+   "reservations_seen": [
+    "res_b6a0d3c0fd4f"
+   ],
+   "order_seen": "ord_472a5ea9ab9d"
+  },
+  {
+   "id": "fan-038",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1611,
+     "backoff_s": 0.568
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 15
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1007,
+     "backoff_s": 0.519
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 6
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 75
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 218
+    }
+   ],
+   "reservations_seen": [
+    "res_fd6be71168aa"
+   ],
+   "order_seen": "ord_c4f5a0da0df6"
+  },
+  {
+   "id": "fan-039",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 216
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 483
+    }
+   ],
+   "reservations_seen": [
+    "res_a022a46f4c02"
+   ],
+   "order_seen": "ord_4d715823dd5a"
+  },
+  {
+   "id": "fan-040",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 168
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 224
+    }
+   ],
+   "reservations_seen": [
+    "res_7dba80e50cf4"
+   ],
+   "order_seen": "ord_d7b66cddd476"
+  },
+  {
+   "id": "fan-041",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1326,
+     "backoff_s": 0.559
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 4
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1014,
+     "backoff_s": 0.523
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 5
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 79
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 218
+    }
+   ],
+   "reservations_seen": [
+    "res_d34deb8fe08f"
+   ],
+   "order_seen": "ord_64024497381c"
+  },
+  {
+   "id": "fan-042",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1689,
+     "backoff_s": 0.588
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 28
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 85
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 217
+    }
+   ],
+   "reservations_seen": [
+    "res_e3788d52e79d"
+   ],
+   "order_seen": "ord_73ac87d8b8d9"
+  },
+  {
+   "id": "fan-043",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1173,
+     "backoff_s": 0.555
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 10
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 64
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1026,
+     "backoff_s": 0.522
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 5
+    }
+   ],
+   "reservations_seen": [
+    "res_5d2d151510f7"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-044",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 603
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 210
+    }
+   ],
+   "reservations_seen": [
+    "res_819c65174c58"
+   ],
+   "order_seen": "ord_3d2c35254e47"
+  },
+  {
+   "id": "fan-045",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1178,
+     "backoff_s": 0.513
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 26
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1028,
+     "backoff_s": 0.536
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 11
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 69
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1016,
+     "backoff_s": 0.543
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 3
+    }
+   ],
+   "reservations_seen": [
+    "res_524ff8299f4b"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-046",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 214
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1026,
+     "backoff_s": 0.547
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 13
+    }
+   ],
+   "reservations_seen": [
+    "res_f964d060b308"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-047",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 215
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1028,
+     "backoff_s": 0.55
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 3
+    }
+   ],
+   "reservations_seen": [
+    "res_9ca1c524e83a"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-048",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 618
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 209
+    }
+   ],
+   "reservations_seen": [
+    "res_f998abefe083"
+   ],
+   "order_seen": "ord_d6156d943a7b"
+  },
+  {
+   "id": "fan-049",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1729,
+     "backoff_s": 0.552
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 48
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 58
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1012,
+     "backoff_s": 0.591
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 4
+    }
+   ],
+   "reservations_seen": [
+    "res_76ad5c89616d"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-050",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1244,
+     "backoff_s": 0.568
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 4
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1012,
+     "backoff_s": 0.532
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 3
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 71
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 202
+    }
+   ],
+   "reservations_seen": [
+    "res_6883ae3c639f"
+   ],
+   "order_seen": "ord_d461271efdc3"
+  },
+  {
+   "id": "fan-051",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1171,
+     "backoff_s": 0.56
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 12
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1014,
+     "backoff_s": 0.536
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 13
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 70
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 216
+    }
+   ],
+   "reservations_seen": [
+    "res_4ebc50453548"
+   ],
+   "order_seen": "ord_dfd6ade8fc6d"
+  },
+  {
+   "id": "fan-052",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1651,
+     "backoff_s": 0.566
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 13
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 69
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 226
+    }
+   ],
+   "reservations_seen": [
+    "res_2e18c820eb9f"
+   ],
+   "order_seen": "ord_81f398cb4be3"
+  },
+  {
+   "id": "fan-053",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 747
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 221
+    }
+   ],
+   "reservations_seen": [
+    "res_f97067d027f0"
+   ],
+   "order_seen": "ord_8cab83aed7ae"
+  },
+  {
+   "id": "fan-054",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 397
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 219
+    }
+   ],
+   "reservations_seen": [
+    "res_f97b2ad9bc80"
+   ],
+   "order_seen": "ord_5cfe5c605536"
+  },
+  {
+   "id": "fan-055",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 755
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 211
+    }
+   ],
+   "reservations_seen": [
+    "res_7905a99afc57"
+   ],
+   "order_seen": "ord_9f10e82fa509"
+  },
+  {
+   "id": "fan-056",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 810
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1042,
+     "backoff_s": 0.597
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 4
+    }
+   ],
+   "reservations_seen": [
+    "res_6942b553d548"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-057",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 259
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 219
+    }
+   ],
+   "reservations_seen": [
+    "res_232b66ca0ac7"
+   ],
+   "order_seen": "ord_1d522e5aa875"
+  },
+  {
+   "id": "fan-058",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 637
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1030,
+     "backoff_s": 0.52
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 17
+    }
+   ],
+   "reservations_seen": [
+    "res_45f610751bf3"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-059",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1692,
+     "backoff_s": 0.5
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 17
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 45
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 203
+    }
+   ],
+   "reservations_seen": [
+    "res_acb822aee084"
+   ],
+   "order_seen": "ord_693b39f138ad"
+  },
+  {
+   "id": "fan-060",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 749
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 218
+    }
+   ],
+   "reservations_seen": [
+    "res_70f09263a22b"
+   ],
+   "order_seen": "ord_f6355d0b9d6a"
+  },
+  {
+   "id": "fan-061",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 415
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1025,
+     "backoff_s": 0.563
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 10
+    }
+   ],
+   "reservations_seen": [
+    "res_5aaeb9df460b"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-062",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 666
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1025,
+     "backoff_s": 0.595
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 48
+    }
+   ],
+   "reservations_seen": [
+    "res_52edd9b68c51"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-063",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1720,
+     "backoff_s": 0.531
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 45
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 51
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 201
+    }
+   ],
+   "reservations_seen": [
+    "res_2857df440852"
+   ],
+   "order_seen": "ord_ea192512e564"
+  },
+  {
+   "id": "fan-064",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 626
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1036,
+     "backoff_s": 0.508
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 17
+    }
+   ],
+   "reservations_seen": [
+    "res_4442d4469166"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-065",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 806
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1040,
+     "backoff_s": 0.521
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 12
+    }
+   ],
+   "reservations_seen": [
+    "res_37a499f17527"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-066",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 729
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 228
+    }
+   ],
+   "reservations_seen": [
+    "res_5f9d705f64fd"
+   ],
+   "order_seen": "ord_67055bbe25f2"
+  },
+  {
+   "id": "fan-067",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 295
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 222
+    }
+   ],
+   "reservations_seen": [
+    "res_010b8c507900"
+   ],
+   "order_seen": "ord_2956a2f6c5c7"
+  },
+  {
+   "id": "fan-068",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 711
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1007,
+     "backoff_s": 0.52
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 15
+    }
+   ],
+   "reservations_seen": [
+    "res_b6791d23e5ae"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-069",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 726
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 199
+    }
+   ],
+   "reservations_seen": [
+    "res_49f534de6944"
+   ],
+   "order_seen": "ord_a5b463928e61"
+  },
+  {
+   "id": "fan-070",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 744
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 218
+    }
+   ],
+   "reservations_seen": [
+    "res_a93a45245391"
+   ],
+   "order_seen": "ord_4c5b43acc112"
+  },
+  {
+   "id": "fan-071",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1715,
+     "backoff_s": 0.556
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 24
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 80
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1015,
+     "backoff_s": 0.544
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 5
+    }
+   ],
+   "reservations_seen": [
+    "res_e4c599e94f8d"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-072",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 805
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1037,
+     "backoff_s": 0.528
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 13
+    }
+   ],
+   "reservations_seen": [
+    "res_ec4392f90d43"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-073",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 372
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 551
+    }
+   ],
+   "reservations_seen": [
+    "res_7d67b64ea4d3"
+   ],
+   "order_seen": "ord_924544ab9bbb"
+  },
+  {
+   "id": "fan-074",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 736
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 222
+    }
+   ],
+   "reservations_seen": [
+    "res_efc0275f61cc"
+   ],
+   "order_seen": "ord_6d29510091ef"
+  },
+  {
+   "id": "fan-075",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 442
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 227
+    }
+   ],
+   "reservations_seen": [
+    "res_3a48e0b7491b"
+   ],
+   "order_seen": "ord_6c90a7b48027"
+  },
+  {
+   "id": "fan-076",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 552
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 366
+    }
+   ],
+   "reservations_seen": [
+    "res_84df0ed0b748"
+   ],
+   "order_seen": "ord_d9f6c4188dd7"
+  },
+  {
+   "id": "fan-077",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 340
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1138,
+     "backoff_s": 0.582
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 4
+    }
+   ],
+   "reservations_seen": [
+    "res_c8956929df67"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-078",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 567
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 236
+    }
+   ],
+   "reservations_seen": [
+    "res_f91fc0f96e42"
+   ],
+   "order_seen": "ord_edf52dece5d4"
+  },
+  {
+   "id": "fan-079",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 796
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 198
+    }
+   ],
+   "reservations_seen": [
+    "res_0bb72b6dd730"
+   ],
+   "order_seen": "ord_7efbe6bf7daf"
+  },
+  {
+   "id": "fan-080",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1681,
+     "backoff_s": 0.537
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 16
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 62
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 227
+    }
+   ],
+   "reservations_seen": [
+    "res_6e5332a96de2"
+   ],
+   "order_seen": "ord_c5da101e7cb6"
+  },
+  {
+   "id": "fan-081",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 743
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 216
+    }
+   ],
+   "reservations_seen": [
+    "res_bda80b9ab681"
+   ],
+   "order_seen": "ord_92b520fbb2ca"
+  },
+  {
+   "id": "fan-082",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 744
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1015,
+     "backoff_s": 0.509
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 30
+    }
+   ],
+   "reservations_seen": [
+    "res_a19a58260b45"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-083",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 637
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 215
+    }
+   ],
+   "reservations_seen": [
+    "res_0f9621c3e05f"
+   ],
+   "order_seen": "ord_e59af8ea52ad"
+  },
+  {
+   "id": "fan-084",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 511
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 221
+    }
+   ],
+   "reservations_seen": [
+    "res_7fd01c7acbc6"
+   ],
+   "order_seen": "ord_391fb6ed4d89"
+  },
+  {
+   "id": "fan-085",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 368
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1107,
+     "backoff_s": 0.544
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 11
+    }
+   ],
+   "reservations_seen": [
+    "res_5dda7f83afed"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-086",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 790
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 200
+    }
+   ],
+   "reservations_seen": [
+    "res_7c512a8061cd"
+   ],
+   "order_seen": "ord_ed880fe61d51"
+  },
+  {
+   "id": "fan-087",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1389,
+     "backoff_s": 0.584
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 18
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 51
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 203
+    }
+   ],
+   "reservations_seen": [
+    "res_80b2343ce730"
+   ],
+   "order_seen": "ord_de2958181119"
+  },
+  {
+   "id": "fan-088",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 664
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 214
+    }
+   ],
+   "reservations_seen": [
+    "res_e5ac86177512"
+   ],
+   "order_seen": "ord_8e0aebd29058"
+  },
+  {
+   "id": "fan-089",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 795
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 227
+    }
+   ],
+   "reservations_seen": [
+    "res_5f5dbd280556"
+   ],
+   "order_seen": "ord_61e9bf474d8e"
+  },
+  {
+   "id": "fan-090",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 793
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 197
+    }
+   ],
+   "reservations_seen": [
+    "res_63d62ca93c17"
+   ],
+   "order_seen": "ord_7663cf3346ae"
+  },
+  {
+   "id": "fan-091",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 402
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1336,
+     "backoff_s": 0.562
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 36
+    }
+   ],
+   "reservations_seen": [
+    "res_152aa4ff530d"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-092",
+   "outcome": "confirmed",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 457
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 389
+    }
+   ],
+   "reservations_seen": [
+    "res_f96f5a1c4877"
+   ],
+   "order_seen": "ord_c657acf9af74"
+  },
+  {
+   "id": "fan-093",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 484
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1030,
+     "backoff_s": 0.597
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 3
+    }
+   ],
+   "reservations_seen": [
+    "res_ede3ccc83840"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-094",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 630
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1031,
+     "backoff_s": 0.535
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 10
+    }
+   ],
+   "reservations_seen": [
+    "res_4d3cff6d63f0"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-095",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1643,
+     "backoff_s": 0.597
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 60
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 61
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1013,
+     "backoff_s": 0.574
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 4
+    }
+   ],
+   "reservations_seen": [
+    "res_65b25ac468aa"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-096",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1700,
+     "backoff_s": 0.528
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 23
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 73
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1023,
+     "backoff_s": 0.542
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 6
+    }
+   ],
+   "reservations_seen": [
+    "res_20554457a47f"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-097",
+   "outcome": "gave_up_reserve",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1736,
+     "backoff_s": 0.51
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 67
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1001,
+     "backoff_s": 0.528
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 4
+    },
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1018,
+     "backoff_s": 0.508
+    },
+    {
+     "path": "/reservations",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 3
+    }
+   ],
+   "reservations_seen": [],
+   "order_seen": null
+  },
+  {
+   "id": "fan-098",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 695
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1041,
+     "backoff_s": 0.553
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 29
+    }
+   ],
+   "reservations_seen": [
+    "res_adad8a62650c"
+   ],
+   "order_seen": null
+  },
+  {
+   "id": "fan-099",
+   "outcome": "gave_up_pay",
+   "calls": [
+    {
+     "path": "/reservations",
+     "attempt": 1,
+     "outcome": 201,
+     "ms": 731
+    },
+    {
+     "path": "/orders",
+     "attempt": 1,
+     "outcome": "timeout",
+     "ms": 1018,
+     "backoff_s": 0.547
+    },
+    {
+     "path": "/orders",
+     "attempt": 2,
+     "outcome": 409,
+     "ms": 29
+    }
+   ],
+   "reservations_seen": [
+    "res_fa1ce7a57555"
+   ],
+   "order_seen": null
+  }
+ ],
+ "timeline": [
+  {
+   "at": "2026-11-16T22:33:33.529+00:00",
+   "fan": "fan-000",
+   "src": "client",
+   "text": "reserve A-1 attempt 1: HTTP 201 in 102 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.545+00:00",
+   "fan": "fan-002",
+   "src": "client",
+   "text": "reserve A-3 attempt 1: HTTP 201 in 118 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.546+00:00",
+   "fan": "fan-001",
+   "src": "client",
+   "text": "reserve A-2 attempt 1: HTTP 201 in 119 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.548+00:00",
+   "fan": "fan-004",
+   "src": "client",
+   "text": "reserve A-5 attempt 1: HTTP 201 in 119 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.561+00:00",
+   "fan": "fan-011",
+   "src": "client",
+   "text": "reserve A-12 attempt 1: HTTP 201 in 129 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.566+00:00",
+   "fan": "fan-013",
+   "src": "client",
+   "text": "reserve A-14 attempt 1: HTTP 201 in 132 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.567+00:00",
+   "fan": "fan-010",
+   "src": "client",
+   "text": "reserve A-11 attempt 1: HTTP 201 in 135 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.568+00:00",
+   "fan": "fan-008",
+   "src": "client",
+   "text": "reserve A-9 attempt 1: HTTP 201 in 137 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.569+00:00",
+   "fan": "fan-009",
+   "src": "client",
+   "text": "reserve A-10 attempt 1: HTTP 201 in 137 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.570+00:00",
+   "fan": "fan-007",
+   "src": "client",
+   "text": "reserve A-8 attempt 1: HTTP 201 in 140 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.571+00:00",
+   "fan": "fan-005",
+   "src": "client",
+   "text": "reserve A-6 attempt 1: HTTP 201 in 142 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.586+00:00",
+   "fan": "fan-023",
+   "src": "client",
+   "text": "reserve A-24 attempt 1: HTTP 201 in 146 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.587+00:00",
+   "fan": "fan-021",
+   "src": "client",
+   "text": "reserve A-22 attempt 1: HTTP 201 in 148 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.588+00:00",
+   "fan": "fan-020",
+   "src": "client",
+   "text": "reserve A-21 attempt 1: HTTP 201 in 150 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.593+00:00",
+   "fan": "fan-018",
+   "src": "client",
+   "text": "reserve A-19 attempt 1: HTTP 201 in 156 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.594+00:00",
+   "fan": "fan-016",
+   "src": "client",
+   "text": "reserve A-17 attempt 1: HTTP 201 in 158 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.595+00:00",
+   "fan": "fan-017",
+   "src": "client",
+   "text": "reserve A-18 attempt 1: HTTP 201 in 158 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.596+00:00",
+   "fan": "fan-015",
+   "src": "client",
+   "text": "reserve A-16 attempt 1: HTTP 201 in 160 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.597+00:00",
+   "fan": "fan-022",
+   "src": "client",
+   "text": "reserve A-23 attempt 1: HTTP 201 in 158 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.598+00:00",
+   "fan": "fan-029",
+   "src": "client",
+   "text": "reserve A-30 attempt 1: HTTP 201 in 154 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.609+00:00",
+   "fan": "fan-026",
+   "src": "client",
+   "text": "reserve A-27 attempt 1: HTTP 201 in 168 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.610+00:00",
+   "fan": "fan-028",
+   "src": "client",
+   "text": "reserve A-29 attempt 1: HTTP 201 in 167 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.611+00:00",
+   "fan": "fan-025",
+   "src": "client",
+   "text": "reserve A-26 attempt 1: HTTP 201 in 171 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.612+00:00",
+   "fan": "fan-027",
+   "src": "client",
+   "text": "reserve A-28 attempt 1: HTTP 201 in 171 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.618+00:00",
+   "fan": "fan-040",
+   "src": "client",
+   "text": "reserve A-41 attempt 1: HTTP 201 in 168 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.619+00:00",
+   "fan": "fan-034",
+   "src": "client",
+   "text": "reserve A-35 attempt 1: HTTP 201 in 173 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.620+00:00",
+   "fan": "fan-033",
+   "src": "client",
+   "text": "reserve A-34 attempt 1: HTTP 201 in 174 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.625+00:00",
+   "fan": "fan-031",
+   "src": "client",
+   "text": "reserve A-32 attempt 1: HTTP 201 in 180 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.626+00:00",
+   "fan": "fan-032",
+   "src": "client",
+   "text": "reserve A-33 attempt 1: HTTP 201 in 181 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.628+00:00",
+   "fan": "fan-030",
+   "src": "client",
+   "text": "reserve A-31 attempt 1: HTTP 201 in 183 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.640+00:00",
+   "fan": "fan-035",
+   "src": "client",
+   "text": "reserve A-36 attempt 1: HTTP 201 in 193 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.641+00:00",
+   "fan": "fan-036",
+   "src": "client",
+   "text": "reserve A-37 attempt 1: HTTP 201 in 194 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.665+00:00",
+   "fan": "fan-039",
+   "src": "client",
+   "text": "reserve A-40 attempt 1: HTTP 201 in 216 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.668+00:00",
+   "fan": "fan-046",
+   "src": "client",
+   "text": "reserve A-47 attempt 1: HTTP 201 in 214 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.669+00:00",
+   "fan": "fan-047",
+   "src": "client",
+   "text": "reserve A-48 attempt 1: HTTP 201 in 215 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.718+00:00",
+   "fan": "fan-057",
+   "src": "client",
+   "text": "reserve B-8 attempt 1: HTTP 201 in 259 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.761+00:00",
+   "fan": "fan-067",
+   "src": "client",
+   "text": "reserve B-18 attempt 1: HTTP 201 in 295 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.762+00:00",
+   "fan": "fan-001",
+   "src": "client",
+   "text": "pay res_2f31adbc7c79 attempt 1: HTTP 201 in 216 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.762+00:00",
+   "fan": "fan-001",
+   "src": "client",
+   "text": "CONFIRMED order ord_eab5c3efa6ba for seat A-2"
+  },
+  {
+   "at": "2026-11-16T22:33:33.762+00:00",
+   "fan": "fan-002",
+   "src": "client",
+   "text": "pay res_0614199fbafc attempt 1: HTTP 201 in 217 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.762+00:00",
+   "fan": "fan-002",
+   "src": "client",
+   "text": "CONFIRMED order ord_093856a13114 for seat A-3"
+  },
+  {
+   "at": "2026-11-16T22:33:33.777+00:00",
+   "fan": "fan-007",
+   "src": "client",
+   "text": "pay res_a263b4d94f2f attempt 1: HTTP 201 in 207 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.777+00:00",
+   "fan": "fan-007",
+   "src": "client",
+   "text": "CONFIRMED order ord_8a12cdf11126 for seat A-8"
+  },
+  {
+   "at": "2026-11-16T22:33:33.778+00:00",
+   "fan": "fan-011",
+   "src": "client",
+   "text": "pay res_aa5159e5e276 attempt 1: HTTP 201 in 216 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.778+00:00",
+   "fan": "fan-011",
+   "src": "client",
+   "text": "CONFIRMED order ord_32e904c17f2e for seat A-12"
+  },
+  {
+   "at": "2026-11-16T22:33:33.778+00:00",
+   "fan": "fan-010",
+   "src": "client",
+   "text": "pay res_e19e798997ca attempt 1: HTTP 201 in 211 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.778+00:00",
+   "fan": "fan-010",
+   "src": "client",
+   "text": "CONFIRMED order ord_bbe4f5057cef for seat A-11"
+  },
+  {
+   "at": "2026-11-16T22:33:33.779+00:00",
+   "fan": "fan-008",
+   "src": "client",
+   "text": "pay res_65c2ff002e9c attempt 1: HTTP 201 in 211 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.779+00:00",
+   "fan": "fan-008",
+   "src": "client",
+   "text": "CONFIRMED order ord_0c62785ce550 for seat A-9"
+  },
+  {
+   "at": "2026-11-16T22:33:33.791+00:00",
+   "fan": "fan-005",
+   "src": "client",
+   "text": "pay res_4a9652a5715a attempt 1: HTTP 201 in 220 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.791+00:00",
+   "fan": "fan-005",
+   "src": "client",
+   "text": "CONFIRMED order ord_0a930e01f081 for seat A-6"
+  },
+  {
+   "at": "2026-11-16T22:33:33.811+00:00",
+   "fan": "fan-077",
+   "src": "client",
+   "text": "reserve B-28 attempt 1: HTTP 201 in 340 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.812+00:00",
+   "fan": "fan-004",
+   "src": "client",
+   "text": "pay res_9a4a39e4a2c3 attempt 1: HTTP 201 in 264 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.812+00:00",
+   "fan": "fan-004",
+   "src": "client",
+   "text": "CONFIRMED order ord_544b668d9363 for seat A-5"
+  },
+  {
+   "at": "2026-11-16T22:33:33.840+00:00",
+   "fan": "fan-073",
+   "src": "client",
+   "text": "reserve B-24 attempt 1: HTTP 201 in 372 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.841+00:00",
+   "fan": "fan-040",
+   "src": "client",
+   "text": "pay res_7dba80e50cf4 attempt 1: HTTP 201 in 224 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.841+00:00",
+   "fan": "fan-040",
+   "src": "client",
+   "text": "CONFIRMED order ord_d7b66cddd476 for seat A-41"
+  },
+  {
+   "at": "2026-11-16T22:33:33.843+00:00",
+   "fan": "fan-085",
+   "src": "client",
+   "text": "reserve B-36 attempt 1: HTTP 201 in 368 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.855+00:00",
+   "fan": "fan-054",
+   "src": "client",
+   "text": "reserve B-5 attempt 1: HTTP 201 in 397 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.877+00:00",
+   "fan": "fan-061",
+   "src": "client",
+   "text": "reserve B-12 attempt 1: HTTP 201 in 415 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.879+00:00",
+   "fan": "fan-013",
+   "src": "client",
+   "text": "pay res_7b7668baf74e attempt 1: HTTP 201 in 312 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.879+00:00",
+   "fan": "fan-013",
+   "src": "client",
+   "text": "CONFIRMED order ord_79ad0d928ba9 for seat A-14"
+  },
+  {
+   "at": "2026-11-16T22:33:33.880+00:00",
+   "fan": "fan-091",
+   "src": "client",
+   "text": "reserve B-42 attempt 1: HTTP 201 in 402 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.912+00:00",
+   "fan": "fan-075",
+   "src": "client",
+   "text": "reserve B-26 attempt 1: HTTP 201 in 442 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.922+00:00",
+   "fan": "fan-035",
+   "src": "client",
+   "text": "pay res_7ec30757f32a attempt 1: HTTP 201 in 282 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.922+00:00",
+   "fan": "fan-035",
+   "src": "client",
+   "text": "CONFIRMED order ord_72f34135b3b1 for seat A-36"
+  },
+  {
+   "at": "2026-11-16T22:33:33.922+00:00",
+   "fan": "fan-018",
+   "src": "client",
+   "text": "pay res_49b0ddcaa58e attempt 1: HTTP 201 in 331 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.922+00:00",
+   "fan": "fan-018",
+   "src": "client",
+   "text": "CONFIRMED order ord_dd47a926d475 for seat A-19"
+  },
+  {
+   "at": "2026-11-16T22:33:33.936+00:00",
+   "fan": "fan-092",
+   "src": "client",
+   "text": "reserve B-43 attempt 1: HTTP 201 in 457 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.937+00:00",
+   "fan": "fan-027",
+   "src": "client",
+   "text": "pay res_8ccd0cfa61ae attempt 1: HTTP 201 in 325 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.938+00:00",
+   "fan": "fan-027",
+   "src": "client",
+   "text": "CONFIRMED order ord_7754d44eec2a for seat A-28"
+  },
+  {
+   "at": "2026-11-16T22:33:33.938+00:00",
+   "fan": "fan-057",
+   "src": "client",
+   "text": "pay res_232b66ca0ac7 attempt 1: HTTP 201 in 219 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.938+00:00",
+   "fan": "fan-057",
+   "src": "client",
+   "text": "CONFIRMED order ord_1d522e5aa875 for seat B-8"
+  },
+  {
+   "at": "2026-11-16T22:33:33.964+00:00",
+   "fan": "fan-093",
+   "src": "client",
+   "text": "reserve B-44 attempt 1: HTTP 201 in 484 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.965+00:00",
+   "fan": "fan-017",
+   "src": "client",
+   "text": "pay res_346622482fcb attempt 1: HTTP 201 in 370 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.965+00:00",
+   "fan": "fan-017",
+   "src": "client",
+   "text": "CONFIRMED order ord_563bf7a8d647 for seat A-18"
+  },
+  {
+   "at": "2026-11-16T22:33:33.983+00:00",
+   "fan": "fan-067",
+   "src": "client",
+   "text": "pay res_010b8c507900 attempt 1: HTTP 201 in 222 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:33.983+00:00",
+   "fan": "fan-067",
+   "src": "client",
+   "text": "CONFIRMED order ord_2956a2f6c5c7 for seat B-18"
+  },
+  {
+   "at": "2026-11-16T22:33:33.986+00:00",
+   "fan": "fan-084",
+   "src": "client",
+   "text": "reserve B-35 attempt 1: HTTP 201 in 511 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.021+00:00",
+   "fan": "fan-030",
+   "src": "client",
+   "text": "pay res_8ebddd88e386 attempt 1: HTTP 201 in 394 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.021+00:00",
+   "fan": "fan-030",
+   "src": "client",
+   "text": "CONFIRMED order ord_c6ad6da422eb for seat A-31"
+  },
+  {
+   "at": "2026-11-16T22:33:34.022+00:00",
+   "fan": "fan-076",
+   "src": "client",
+   "text": "reserve B-27 attempt 1: HTTP 201 in 552 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.039+00:00",
+   "fan": "fan-078",
+   "src": "client",
+   "text": "reserve B-29 attempt 1: HTTP 201 in 567 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.055+00:00",
+   "fan": "fan-044",
+   "src": "client",
+   "text": "reserve A-45 attempt 1: HTTP 201 in 603 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.057+00:00",
+   "fan": "fan-029",
+   "src": "client",
+   "text": "pay res_45c03a3482bf attempt 1: HTTP 201 in 458 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.057+00:00",
+   "fan": "fan-029",
+   "src": "client",
+   "text": "CONFIRMED order ord_bc51ea74d5a7 for seat A-30"
+  },
+  {
+   "at": "2026-11-16T22:33:34.073+00:00",
+   "fan": "fan-048",
+   "src": "client",
+   "text": "reserve A-49 attempt 1: HTTP 201 in 618 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.074+00:00",
+   "fan": "fan-054",
+   "src": "client",
+   "text": "pay res_f97b2ad9bc80 attempt 1: HTTP 201 in 219 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.074+00:00",
+   "fan": "fan-054",
+   "src": "client",
+   "text": "CONFIRMED order ord_5cfe5c605536 for seat B-5"
+  },
+  {
+   "at": "2026-11-16T22:33:34.090+00:00",
+   "fan": "fan-064",
+   "src": "client",
+   "text": "reserve B-15 attempt 1: HTTP 201 in 626 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.096+00:00",
+   "fan": "fan-058",
+   "src": "client",
+   "text": "reserve B-9 attempt 1: HTTP 201 in 637 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.098+00:00",
+   "fan": "fan-028",
+   "src": "client",
+   "text": "pay res_54f12584de97 attempt 1: HTTP 201 in 488 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.098+00:00",
+   "fan": "fan-028",
+   "src": "client",
+   "text": "CONFIRMED order ord_13eeacb960d2 for seat A-29"
+  },
+  {
+   "at": "2026-11-16T22:33:34.110+00:00",
+   "fan": "fan-094",
+   "src": "client",
+   "text": "reserve B-45 attempt 1: HTTP 201 in 630 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.111+00:00",
+   "fan": "fan-083",
+   "src": "client",
+   "text": "reserve B-34 attempt 1: HTTP 201 in 637 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.128+00:00",
+   "fan": "fan-062",
+   "src": "client",
+   "text": "reserve B-13 attempt 1: HTTP 201 in 666 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.140+00:00",
+   "fan": "fan-075",
+   "src": "client",
+   "text": "pay res_3a48e0b7491b attempt 1: HTTP 201 in 227 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.140+00:00",
+   "fan": "fan-075",
+   "src": "client",
+   "text": "CONFIRMED order ord_6c90a7b48027 for seat B-26"
+  },
+  {
+   "at": "2026-11-16T22:33:34.141+00:00",
+   "fan": "fan-088",
+   "src": "client",
+   "text": "reserve B-39 attempt 1: HTTP 201 in 664 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.149+00:00",
+   "fan": "fan-039",
+   "src": "client",
+   "text": "pay res_a022a46f4c02 attempt 1: HTTP 201 in 483 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.149+00:00",
+   "fan": "fan-039",
+   "src": "client",
+   "text": "CONFIRMED order ord_4d715823dd5a for seat A-40"
+  },
+  {
+   "at": "2026-11-16T22:33:34.177+00:00",
+   "fan": "fan-068",
+   "src": "client",
+   "text": "reserve B-19 attempt 1: HTTP 201 in 711 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.178+00:00",
+   "fan": "fan-098",
+   "src": "client",
+   "text": "reserve B-49 attempt 1: HTTP 201 in 695 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.193+00:00",
+   "fan": "fan-069",
+   "src": "client",
+   "text": "reserve B-20 attempt 1: HTTP 201 in 726 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.195+00:00",
+   "fan": "fan-066",
+   "src": "client",
+   "text": "reserve B-17 attempt 1: HTTP 201 in 729 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.196+00:00",
+   "fan": "fan-015",
+   "src": "client",
+   "text": "pay res_61c07c5dcb33 attempt 1: HTTP 201 in 600 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.196+00:00",
+   "fan": "fan-015",
+   "src": "client",
+   "text": "CONFIRMED order ord_3783ef9ec1da for seat A-16"
+  },
+  {
+   "at": "2026-11-16T22:33:34.204+00:00",
+   "fan": "fan-053",
+   "src": "client",
+   "text": "reserve B-4 attempt 1: HTTP 201 in 747 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.205+00:00",
+   "fan": "fan-074",
+   "src": "client",
+   "text": "reserve B-25 attempt 1: HTTP 201 in 736 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.206+00:00",
+   "fan": "fan-084",
+   "src": "client",
+   "text": "pay res_7fd01c7acbc6 attempt 1: HTTP 201 in 221 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.206+00:00",
+   "fan": "fan-084",
+   "src": "client",
+   "text": "CONFIRMED order ord_391fb6ed4d89 for seat B-35"
+  },
+  {
+   "at": "2026-11-16T22:33:34.210+00:00",
+   "fan": "fan-060",
+   "src": "client",
+   "text": "reserve B-11 attempt 1: HTTP 201 in 749 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.211+00:00",
+   "fan": "fan-070",
+   "src": "client",
+   "text": "reserve B-21 attempt 1: HTTP 201 in 744 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.213+00:00",
+   "fan": "fan-055",
+   "src": "client",
+   "text": "reserve B-6 attempt 1: HTTP 201 in 755 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.213+00:00",
+   "fan": "fan-099",
+   "src": "client",
+   "text": "reserve B-50 attempt 1: HTTP 201 in 731 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.216+00:00",
+   "fan": "fan-081",
+   "src": "client",
+   "text": "reserve B-32 attempt 1: HTTP 201 in 743 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.217+00:00",
+   "fan": "fan-082",
+   "src": "client",
+   "text": "reserve B-33 attempt 1: HTTP 201 in 744 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.266+00:00",
+   "fan": "fan-044",
+   "src": "client",
+   "text": "pay res_819c65174c58 attempt 1: HTTP 201 in 210 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.266+00:00",
+   "fan": "fan-044",
+   "src": "client",
+   "text": "CONFIRMED order ord_3d2c35254e47 for seat A-45"
+  },
+  {
+   "at": "2026-11-16T22:33:34.266+00:00",
+   "fan": "fan-086",
+   "src": "client",
+   "text": "reserve B-37 attempt 1: HTTP 201 in 790 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.267+00:00",
+   "fan": "fan-079",
+   "src": "client",
+   "text": "reserve B-30 attempt 1: HTTP 201 in 796 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.269+00:00",
+   "fan": "fan-056",
+   "src": "client",
+   "text": "reserve B-7 attempt 1: HTTP 201 in 810 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.270+00:00",
+   "fan": "fan-065",
+   "src": "client",
+   "text": "reserve B-16 attempt 1: HTTP 201 in 806 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.271+00:00",
+   "fan": "fan-090",
+   "src": "client",
+   "text": "reserve B-41 attempt 1: HTTP 201 in 793 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.272+00:00",
+   "fan": "fan-089",
+   "src": "client",
+   "text": "reserve B-40 attempt 1: HTTP 201 in 795 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.273+00:00",
+   "fan": "fan-072",
+   "src": "client",
+   "text": "reserve B-23 attempt 1: HTTP 201 in 805 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.275+00:00",
+   "fan": "fan-078",
+   "src": "client",
+   "text": "pay res_f91fc0f96e42 attempt 1: HTTP 201 in 236 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.275+00:00",
+   "fan": "fan-078",
+   "src": "client",
+   "text": "CONFIRMED order ord_edf52dece5d4 for seat B-29"
+  },
+  {
+   "at": "2026-11-16T22:33:34.282+00:00",
+   "fan": "fan-048",
+   "src": "client",
+   "text": "pay res_f998abefe083 attempt 1: HTTP 201 in 209 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.282+00:00",
+   "fan": "fan-048",
+   "src": "client",
+   "text": "CONFIRMED order ord_d6156d943a7b for seat A-49"
+  },
+  {
+   "at": "2026-11-16T22:33:34.324+00:00",
+   "fan": "fan-021",
+   "src": "client",
+   "text": "pay res_9ab5d3b8cdf6 attempt 1: HTTP 201 in 737 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.324+00:00",
+   "fan": "fan-021",
+   "src": "client",
+   "text": "CONFIRMED order ord_b84aba471e4d for seat A-22"
+  },
+  {
+   "at": "2026-11-16T22:33:34.325+00:00",
+   "fan": "fan-026",
+   "src": "client",
+   "text": "pay res_8045151fb741 attempt 1: HTTP 201 in 716 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.325+00:00",
+   "fan": "fan-026",
+   "src": "client",
+   "text": "CONFIRMED order ord_c437f4d53a94 for seat A-27"
+  },
+  {
+   "at": "2026-11-16T22:33:34.325+00:00",
+   "fan": "fan-092",
+   "src": "client",
+   "text": "pay res_f96f5a1c4877 attempt 1: HTTP 201 in 389 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.325+00:00",
+   "fan": "fan-092",
+   "src": "client",
+   "text": "CONFIRMED order ord_c657acf9af74 for seat B-43"
+  },
+  {
+   "at": "2026-11-16T22:33:34.326+00:00",
+   "fan": "fan-083",
+   "src": "client",
+   "text": "pay res_0f9621c3e05f attempt 1: HTTP 201 in 215 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.326+00:00",
+   "fan": "fan-083",
+   "src": "client",
+   "text": "CONFIRMED order ord_e59af8ea52ad for seat B-34"
+  },
+  {
+   "at": "2026-11-16T22:33:34.355+00:00",
+   "fan": "fan-088",
+   "src": "client",
+   "text": "pay res_e5ac86177512 attempt 1: HTTP 201 in 214 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.355+00:00",
+   "fan": "fan-088",
+   "src": "client",
+   "text": "CONFIRMED order ord_8e0aebd29058 for seat B-39"
+  },
+  {
+   "at": "2026-11-16T22:33:34.355+00:00",
+   "fan": "fan-034",
+   "src": "client",
+   "text": "pay res_925e99085641 attempt 1: HTTP 201 in 736 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.355+00:00",
+   "fan": "fan-034",
+   "src": "client",
+   "text": "CONFIRMED order ord_6e289fa5a044 for seat A-35"
+  },
+  {
+   "at": "2026-11-16T22:33:34.356+00:00",
+   "fan": "fan-025",
+   "src": "client",
+   "text": "pay res_d4712666535d attempt 1: HTTP 201 in 744 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.356+00:00",
+   "fan": "fan-025",
+   "src": "client",
+   "text": "CONFIRMED order ord_f7ba80c48dc0 for seat A-26"
+  },
+  {
+   "at": "2026-11-16T22:33:34.387+00:00",
+   "fan": "fan-009",
+   "src": "client",
+   "text": "pay res_c06303a6314f attempt 1: HTTP 201 in 818 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.387+00:00",
+   "fan": "fan-009",
+   "src": "client",
+   "text": "CONFIRMED order ord_1aa62b45d304 for seat A-10"
+  },
+  {
+   "at": "2026-11-16T22:33:34.388+00:00",
+   "fan": "fan-076",
+   "src": "client",
+   "text": "pay res_84df0ed0b748 attempt 1: HTTP 201 in 366 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.388+00:00",
+   "fan": "fan-076",
+   "src": "client",
+   "text": "CONFIRMED order ord_d9f6c4188dd7 for seat B-27"
+  },
+  {
+   "at": "2026-11-16T22:33:34.390+00:00",
+   "fan": "fan-032",
+   "src": "client",
+   "text": "pay res_2e7e3034efaf attempt 1: HTTP 201 in 764 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.390+00:00",
+   "fan": "fan-032",
+   "src": "client",
+   "text": "CONFIRMED order ord_784dba5bc83e for seat A-33"
+  },
+  {
+   "at": "2026-11-16T22:33:34.391+00:00",
+   "fan": "fan-073",
+   "src": "client",
+   "text": "pay res_7d67b64ea4d3 attempt 1: HTTP 201 in 551 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.391+00:00",
+   "fan": "fan-073",
+   "src": "client",
+   "text": "CONFIRMED order ord_924544ab9bbb for seat B-24"
+  },
+  {
+   "at": "2026-11-16T22:33:34.391+00:00",
+   "fan": "fan-069",
+   "src": "client",
+   "text": "pay res_49f534de6944 attempt 1: HTTP 201 in 199 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.391+00:00",
+   "fan": "fan-069",
+   "src": "client",
+   "text": "CONFIRMED order ord_a5b463928e61 for seat B-20"
+  },
+  {
+   "at": "2026-11-16T22:33:34.422+00:00",
+   "fan": "fan-066",
+   "src": "client",
+   "text": "pay res_5f9d705f64fd attempt 1: HTTP 201 in 228 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.422+00:00",
+   "fan": "fan-066",
+   "src": "client",
+   "text": "CONFIRMED order ord_67055bbe25f2 for seat B-17"
+  },
+  {
+   "at": "2026-11-16T22:33:34.424+00:00",
+   "fan": "fan-055",
+   "src": "client",
+   "text": "pay res_7905a99afc57 attempt 1: HTTP 201 in 211 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.424+00:00",
+   "fan": "fan-055",
+   "src": "client",
+   "text": "CONFIRMED order ord_9f10e82fa509 for seat B-6"
+  },
+  {
+   "at": "2026-11-16T22:33:34.425+00:00",
+   "fan": "fan-053",
+   "src": "client",
+   "text": "pay res_f97067d027f0 attempt 1: HTTP 201 in 221 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.425+00:00",
+   "fan": "fan-053",
+   "src": "client",
+   "text": "CONFIRMED order ord_8cab83aed7ae for seat B-4"
+  },
+  {
+   "at": "2026-11-16T22:33:34.426+00:00",
+   "fan": "fan-074",
+   "src": "client",
+   "text": "pay res_efc0275f61cc attempt 1: HTTP 201 in 222 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.427+00:00",
+   "fan": "fan-074",
+   "src": "client",
+   "text": "CONFIRMED order ord_6d29510091ef for seat B-25"
+  },
+  {
+   "at": "2026-11-16T22:33:34.428+00:00",
+   "fan": "fan-060",
+   "src": "client",
+   "text": "pay res_70f09263a22b attempt 1: HTTP 201 in 218 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.428+00:00",
+   "fan": "fan-060",
+   "src": "client",
+   "text": "CONFIRMED order ord_f6355d0b9d6a for seat B-11"
+  },
+  {
+   "at": "2026-11-16T22:33:34.429+00:00",
+   "fan": "fan-070",
+   "src": "client",
+   "text": "pay res_a93a45245391 attempt 1: HTTP 201 in 218 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.429+00:00",
+   "fan": "fan-070",
+   "src": "client",
+   "text": "CONFIRMED order ord_4c5b43acc112 for seat B-21"
+  },
+  {
+   "at": "2026-11-16T22:33:34.431+00:00",
+   "fan": "fan-081",
+   "src": "client",
+   "text": "pay res_bda80b9ab681 attempt 1: HTTP 201 in 216 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.431+00:00",
+   "fan": "fan-081",
+   "src": "client",
+   "text": "CONFIRMED order ord_92b520fbb2ca for seat B-32"
+  },
+  {
+   "at": "2026-11-16T22:33:34.465+00:00",
+   "fan": "fan-079",
+   "src": "client",
+   "text": "pay res_0bb72b6dd730 attempt 1: HTTP 201 in 198 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.465+00:00",
+   "fan": "fan-079",
+   "src": "client",
+   "text": "CONFIRMED order ord_7efbe6bf7daf for seat B-30"
+  },
+  {
+   "at": "2026-11-16T22:33:34.466+00:00",
+   "fan": "fan-086",
+   "src": "client",
+   "text": "pay res_7c512a8061cd attempt 1: HTTP 201 in 200 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.466+00:00",
+   "fan": "fan-086",
+   "src": "client",
+   "text": "CONFIRMED order ord_ed880fe61d51 for seat B-37"
+  },
+  {
+   "at": "2026-11-16T22:33:34.467+00:00",
+   "fan": "fan-090",
+   "src": "client",
+   "text": "pay res_63d62ca93c17 attempt 1: HTTP 201 in 197 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.467+00:00",
+   "fan": "fan-090",
+   "src": "client",
+   "text": "CONFIRMED order ord_7663cf3346ae for seat B-41"
+  },
+  {
+   "at": "2026-11-16T22:33:34.497+00:00",
+   "fan": "fan-003",
+   "src": "client",
+   "text": "reserve A-4 attempt 1: TIMEOUT after 1068 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.497+00:00",
+   "fan": "fan-003",
+   "src": "client",
+   "text": "reserve A-4 backing off 0.587 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.499+00:00",
+   "fan": "fan-089",
+   "src": "client",
+   "text": "pay res_5f5dbd280556 attempt 1: HTTP 201 in 227 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:34.499+00:00",
+   "fan": "fan-089",
+   "src": "client",
+   "text": "CONFIRMED order ord_61e9bf474d8e for seat B-40"
+  },
+  {
+   "at": "2026-11-16T22:33:34.527+00:00",
+   "fan": "fan-006",
+   "src": "client",
+   "text": "reserve A-7 attempt 1: TIMEOUT after 1097 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.527+00:00",
+   "fan": "fan-006",
+   "src": "client",
+   "text": "reserve A-7 backing off 0.562 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.528+00:00",
+   "fan": "fan-012",
+   "src": "client",
+   "text": "reserve A-13 attempt 1: TIMEOUT after 1094 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.528+00:00",
+   "fan": "fan-012",
+   "src": "client",
+   "text": "reserve A-13 backing off 0.526 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.529+00:00",
+   "fan": "fan-014",
+   "src": "client",
+   "text": "reserve A-15 attempt 1: TIMEOUT after 1094 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.529+00:00",
+   "fan": "fan-014",
+   "src": "client",
+   "text": "reserve A-15 backing off 0.592 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.530+00:00",
+   "fan": "fan-019",
+   "src": "client",
+   "text": "reserve A-20 attempt 1: TIMEOUT after 1092 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.530+00:00",
+   "fan": "fan-019",
+   "src": "client",
+   "text": "reserve A-20 backing off 0.522 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.556+00:00",
+   "fan": "fan-024",
+   "src": "client",
+   "text": "reserve A-25 attempt 1: TIMEOUT after 1116 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.556+00:00",
+   "fan": "fan-024",
+   "src": "client",
+   "text": "reserve A-25 backing off 0.585 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.589+00:00",
+   "fan": "fan-037",
+   "src": "client",
+   "text": "reserve A-38 attempt 1: TIMEOUT after 1142 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.589+00:00",
+   "fan": "fan-037",
+   "src": "client",
+   "text": "reserve A-38 backing off 0.537 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.624+00:00",
+   "fan": "fan-043",
+   "src": "client",
+   "text": "reserve A-44 attempt 1: TIMEOUT after 1173 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.624+00:00",
+   "fan": "fan-043",
+   "src": "client",
+   "text": "reserve A-44 backing off 0.555 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.627+00:00",
+   "fan": "fan-051",
+   "src": "client",
+   "text": "reserve B-2 attempt 1: TIMEOUT after 1171 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.627+00:00",
+   "fan": "fan-051",
+   "src": "client",
+   "text": "reserve B-2 backing off 0.560 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.630+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "reserve A-46 attempt 1: TIMEOUT after 1178 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.630+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "reserve A-46 backing off 0.513 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.635+00:00",
+   "fan": "fan-020",
+   "src": "client",
+   "text": "pay res_0a88cf6c8806 attempt 1: TIMEOUT after 1047 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.635+00:00",
+   "fan": "fan-020",
+   "src": "client",
+   "text": "pay res_0a88cf6c8806 backing off 0.588 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.689+00:00",
+   "fan": "fan-022",
+   "src": "client",
+   "text": "pay res_0401cc6ea89a attempt 1: TIMEOUT after 1093 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.689+00:00",
+   "fan": "fan-022",
+   "src": "client",
+   "text": "pay res_0401cc6ea89a backing off 0.581 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.693+00:00",
+   "fan": "fan-046",
+   "src": "client",
+   "text": "pay res_f964d060b308 attempt 1: TIMEOUT after 1026 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.693+00:00",
+   "fan": "fan-046",
+   "src": "client",
+   "text": "pay res_f964d060b308 backing off 0.547 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.697+00:00",
+   "fan": "fan-047",
+   "src": "client",
+   "text": "pay res_9ca1c524e83a attempt 1: TIMEOUT after 1028 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.697+00:00",
+   "fan": "fan-047",
+   "src": "client",
+   "text": "pay res_9ca1c524e83a backing off 0.550 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.700+00:00",
+   "fan": "fan-050",
+   "src": "client",
+   "text": "reserve B-1 attempt 1: TIMEOUT after 1244 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.700+00:00",
+   "fan": "fan-050",
+   "src": "client",
+   "text": "reserve B-1 backing off 0.568 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.777+00:00",
+   "fan": "fan-041",
+   "src": "client",
+   "text": "reserve A-42 attempt 1: TIMEOUT after 1326 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.777+00:00",
+   "fan": "fan-041",
+   "src": "client",
+   "text": "reserve A-42 backing off 0.559 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.860+00:00",
+   "fan": "fan-033",
+   "src": "client",
+   "text": "pay res_4331c047ba4e attempt 1: TIMEOUT after 1239 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.860+00:00",
+   "fan": "fan-033",
+   "src": "client",
+   "text": "pay res_4331c047ba4e backing off 0.564 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.863+00:00",
+   "fan": "fan-000",
+   "src": "client",
+   "text": "pay res_79446a8803c4 attempt 1: TIMEOUT after 1334 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.863+00:00",
+   "fan": "fan-000",
+   "src": "client",
+   "text": "pay res_79446a8803c4 backing off 0.589 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.866+00:00",
+   "fan": "fan-087",
+   "src": "client",
+   "text": "reserve B-38 attempt 1: TIMEOUT after 1389 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.866+00:00",
+   "fan": "fan-087",
+   "src": "client",
+   "text": "reserve B-38 backing off 0.584 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.902+00:00",
+   "fan": "fan-061",
+   "src": "client",
+   "text": "pay res_5aaeb9df460b attempt 1: TIMEOUT after 1025 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.902+00:00",
+   "fan": "fan-061",
+   "src": "client",
+   "text": "pay res_5aaeb9df460b backing off 0.563 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.949+00:00",
+   "fan": "fan-077",
+   "src": "client",
+   "text": "pay res_c8956929df67 attempt 1: TIMEOUT after 1138 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.949+00:00",
+   "fan": "fan-077",
+   "src": "client",
+   "text": "pay res_c8956929df67 backing off 0.582 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.950+00:00",
+   "fan": "fan-085",
+   "src": "client",
+   "text": "pay res_5dda7f83afed attempt 1: TIMEOUT after 1107 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.950+00:00",
+   "fan": "fan-085",
+   "src": "client",
+   "text": "pay res_5dda7f83afed backing off 0.544 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.951+00:00",
+   "fan": "fan-023",
+   "src": "client",
+   "text": "pay res_4cd884f5e0c8 attempt 1: TIMEOUT after 1365 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.951+00:00",
+   "fan": "fan-023",
+   "src": "client",
+   "text": "pay res_4cd884f5e0c8 backing off 0.542 s"
+  },
+  {
+   "at": "2026-11-16T22:33:34.994+00:00",
+   "fan": "fan-093",
+   "src": "client",
+   "text": "pay res_ede3ccc83840 attempt 1: TIMEOUT after 1030 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:34.994+00:00",
+   "fan": "fan-093",
+   "src": "client",
+   "text": "pay res_ede3ccc83840 backing off 0.597 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.059+00:00",
+   "fan": "fan-038",
+   "src": "client",
+   "text": "reserve A-39 attempt 1: TIMEOUT after 1611 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.059+00:00",
+   "fan": "fan-038",
+   "src": "client",
+   "text": "reserve A-39 backing off 0.568 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.062+00:00",
+   "fan": "fan-019",
+   "src": "client",
+   "text": "reserve A-20 attempt 2: HTTP 409 in 7 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.062+00:00",
+   "fan": "fan-019",
+   "src": "client",
+   "text": "seat A-20 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.065+00:00",
+   "fan": "fan-012",
+   "src": "client",
+   "text": "reserve A-13 attempt 2: HTTP 409 in 8 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.065+00:00",
+   "fan": "fan-012",
+   "src": "client",
+   "text": "seat A-13 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.108+00:00",
+   "fan": "fan-052",
+   "src": "client",
+   "text": "reserve B-3 attempt 1: TIMEOUT after 1651 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.108+00:00",
+   "fan": "fan-052",
+   "src": "client",
+   "text": "reserve B-3 backing off 0.566 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.113+00:00",
+   "fan": "fan-019",
+   "src": "client",
+   "text": "reserve C-20 attempt 1: HTTP 201 in 50 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.115+00:00",
+   "fan": "fan-012",
+   "src": "client",
+   "text": "reserve C-13 attempt 1: HTTP 201 in 50 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.120+00:00",
+   "fan": "fan-003",
+   "src": "client",
+   "text": "reserve A-4 attempt 2: HTTP 409 in 17 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.120+00:00",
+   "fan": "fan-003",
+   "src": "client",
+   "text": "seat A-4 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.124+00:00",
+   "fan": "fan-095",
+   "src": "client",
+   "text": "reserve B-46 attempt 1: TIMEOUT after 1643 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.124+00:00",
+   "fan": "fan-095",
+   "src": "client",
+   "text": "reserve B-46 backing off 0.597 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.125+00:00",
+   "fan": "fan-031",
+   "src": "client",
+   "text": "pay res_237dc5c68015 attempt 1: TIMEOUT after 1500 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.125+00:00",
+   "fan": "fan-031",
+   "src": "client",
+   "text": "pay res_237dc5c68015 backing off 0.571 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.126+00:00",
+   "fan": "fan-064",
+   "src": "client",
+   "text": "pay res_4442d4469166 attempt 1: TIMEOUT after 1036 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.126+00:00",
+   "fan": "fan-064",
+   "src": "client",
+   "text": "pay res_4442d4469166 backing off 0.508 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.126+00:00",
+   "fan": "fan-058",
+   "src": "client",
+   "text": "pay res_45f610751bf3 attempt 1: TIMEOUT after 1030 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.127+00:00",
+   "fan": "fan-058",
+   "src": "client",
+   "text": "pay res_45f610751bf3 backing off 0.520 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.129+00:00",
+   "fan": "fan-006",
+   "src": "client",
+   "text": "reserve A-7 attempt 2: HTTP 409 in 25 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.129+00:00",
+   "fan": "fan-006",
+   "src": "client",
+   "text": "seat A-7 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.137+00:00",
+   "fan": "fan-014",
+   "src": "client",
+   "text": "reserve A-15 attempt 2: HTTP 409 in 31 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.137+00:00",
+   "fan": "fan-014",
+   "src": "client",
+   "text": "seat A-15 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.140+00:00",
+   "fan": "fan-042",
+   "src": "client",
+   "text": "reserve A-43 attempt 1: TIMEOUT after 1689 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.140+00:00",
+   "fan": "fan-042",
+   "src": "client",
+   "text": "reserve A-43 backing off 0.588 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.141+00:00",
+   "fan": "fan-094",
+   "src": "client",
+   "text": "pay res_4d3cff6d63f0 attempt 1: TIMEOUT after 1031 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.141+00:00",
+   "fan": "fan-094",
+   "src": "client",
+   "text": "pay res_4d3cff6d63f0 backing off 0.535 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.142+00:00",
+   "fan": "fan-036",
+   "src": "client",
+   "text": "pay res_8ad6a7d82dd3 attempt 1: TIMEOUT after 1500 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.142+00:00",
+   "fan": "fan-036",
+   "src": "client",
+   "text": "pay res_8ad6a7d82dd3 backing off 0.580 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.148+00:00",
+   "fan": "fan-037",
+   "src": "client",
+   "text": "reserve A-38 attempt 2: HTTP 409 in 27 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.148+00:00",
+   "fan": "fan-037",
+   "src": "client",
+   "text": "seat A-38 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.153+00:00",
+   "fan": "fan-059",
+   "src": "client",
+   "text": "reserve B-10 attempt 1: TIMEOUT after 1692 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.153+00:00",
+   "fan": "fan-059",
+   "src": "client",
+   "text": "reserve B-10 backing off 0.500 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.154+00:00",
+   "fan": "fan-062",
+   "src": "client",
+   "text": "pay res_52edd9b68c51 attempt 1: TIMEOUT after 1025 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.154+00:00",
+   "fan": "fan-062",
+   "src": "client",
+   "text": "pay res_52edd9b68c51 backing off 0.595 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.154+00:00",
+   "fan": "fan-080",
+   "src": "client",
+   "text": "reserve B-31 attempt 1: TIMEOUT after 1681 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.154+00:00",
+   "fan": "fan-080",
+   "src": "client",
+   "text": "reserve B-31 backing off 0.537 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.157+00:00",
+   "fan": "fan-024",
+   "src": "client",
+   "text": "reserve A-25 attempt 2: HTTP 409 in 25 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.157+00:00",
+   "fan": "fan-024",
+   "src": "client",
+   "text": "seat A-25 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.160+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "reserve A-46 attempt 2: HTTP 409 in 26 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.160+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "seat A-46 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.173+00:00",
+   "fan": "fan-043",
+   "src": "client",
+   "text": "reserve A-44 attempt 2: HTTP 409 in 10 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.173+00:00",
+   "fan": "fan-043",
+   "src": "client",
+   "text": "seat A-44 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.176+00:00",
+   "fan": "fan-051",
+   "src": "client",
+   "text": "reserve B-2 attempt 2: HTTP 409 in 12 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.176+00:00",
+   "fan": "fan-051",
+   "src": "client",
+   "text": "seat B-2 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.181+00:00",
+   "fan": "fan-096",
+   "src": "client",
+   "text": "reserve B-47 attempt 1: TIMEOUT after 1700 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.181+00:00",
+   "fan": "fan-096",
+   "src": "client",
+   "text": "reserve B-47 backing off 0.528 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.182+00:00",
+   "fan": "fan-071",
+   "src": "client",
+   "text": "reserve B-22 attempt 1: TIMEOUT after 1715 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.182+00:00",
+   "fan": "fan-071",
+   "src": "client",
+   "text": "reserve B-22 backing off 0.556 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.183+00:00",
+   "fan": "fan-063",
+   "src": "client",
+   "text": "reserve B-14 attempt 1: TIMEOUT after 1720 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.183+00:00",
+   "fan": "fan-063",
+   "src": "client",
+   "text": "reserve B-14 backing off 0.531 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.184+00:00",
+   "fan": "fan-068",
+   "src": "client",
+   "text": "pay res_b6791d23e5ae attempt 1: TIMEOUT after 1007 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.184+00:00",
+   "fan": "fan-068",
+   "src": "client",
+   "text": "pay res_b6791d23e5ae backing off 0.520 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.185+00:00",
+   "fan": "fan-049",
+   "src": "client",
+   "text": "reserve A-50 attempt 1: TIMEOUT after 1729 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.185+00:00",
+   "fan": "fan-049",
+   "src": "client",
+   "text": "reserve A-50 backing off 0.552 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.186+00:00",
+   "fan": "fan-003",
+   "src": "client",
+   "text": "reserve C-4 attempt 1: HTTP 201 in 66 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.217+00:00",
+   "fan": "fan-091",
+   "src": "client",
+   "text": "pay res_152aa4ff530d attempt 1: TIMEOUT after 1336 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.217+00:00",
+   "fan": "fan-091",
+   "src": "client",
+   "text": "pay res_152aa4ff530d backing off 0.562 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.218+00:00",
+   "fan": "fan-016",
+   "src": "client",
+   "text": "pay res_ea3a027d95ce attempt 1: TIMEOUT after 1624 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.218+00:00",
+   "fan": "fan-016",
+   "src": "client",
+   "text": "pay res_ea3a027d95ce backing off 0.507 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.218+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "reserve B-48 attempt 1: TIMEOUT after 1736 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.218+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "reserve B-48 backing off 0.510 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.219+00:00",
+   "fan": "fan-098",
+   "src": "client",
+   "text": "pay res_adad8a62650c attempt 1: TIMEOUT after 1041 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.219+00:00",
+   "fan": "fan-098",
+   "src": "client",
+   "text": "pay res_adad8a62650c backing off 0.553 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.222+00:00",
+   "fan": "fan-037",
+   "src": "client",
+   "text": "reserve C-38 attempt 1: HTTP 201 in 74 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.223+00:00",
+   "fan": "fan-006",
+   "src": "client",
+   "text": "reserve C-7 attempt 1: HTTP 201 in 94 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.225+00:00",
+   "fan": "fan-014",
+   "src": "client",
+   "text": "reserve C-15 attempt 1: HTTP 201 in 88 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.226+00:00",
+   "fan": "fan-024",
+   "src": "client",
+   "text": "reserve C-25 attempt 1: HTTP 201 in 69 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.232+00:00",
+   "fan": "fan-020",
+   "src": "client",
+   "text": "pay res_0a88cf6c8806 attempt 2: HTTP 409 in 18 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.232+00:00",
+   "fan": "fan-020",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.232+00:00",
+   "fan": "fan-082",
+   "src": "client",
+   "text": "pay res_a19a58260b45 attempt 1: TIMEOUT after 1015 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.232+00:00",
+   "fan": "fan-082",
+   "src": "client",
+   "text": "pay res_a19a58260b45 backing off 0.509 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.233+00:00",
+   "fan": "fan-099",
+   "src": "client",
+   "text": "pay res_fa1ce7a57555 attempt 1: TIMEOUT after 1018 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.233+00:00",
+   "fan": "fan-099",
+   "src": "client",
+   "text": "pay res_fa1ce7a57555 backing off 0.547 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.237+00:00",
+   "fan": "fan-043",
+   "src": "client",
+   "text": "reserve C-44 attempt 1: HTTP 201 in 64 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.241+00:00",
+   "fan": "fan-046",
+   "src": "client",
+   "text": "pay res_f964d060b308 attempt 2: HTTP 409 in 13 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.241+00:00",
+   "fan": "fan-046",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.243+00:00",
+   "fan": "fan-047",
+   "src": "client",
+   "text": "pay res_9ca1c524e83a attempt 2: HTTP 409 in 3 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.243+00:00",
+   "fan": "fan-047",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.280+00:00",
+   "fan": "fan-022",
+   "src": "client",
+   "text": "pay res_0401cc6ea89a attempt 2: HTTP 409 in 5 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.280+00:00",
+   "fan": "fan-022",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.281+00:00",
+   "fan": "fan-050",
+   "src": "client",
+   "text": "reserve B-1 attempt 2: HTTP 409 in 4 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.281+00:00",
+   "fan": "fan-050",
+   "src": "client",
+   "text": "seat B-1 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.310+00:00",
+   "fan": "fan-065",
+   "src": "client",
+   "text": "pay res_37a499f17527 attempt 1: TIMEOUT after 1040 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.310+00:00",
+   "fan": "fan-065",
+   "src": "client",
+   "text": "pay res_37a499f17527 backing off 0.521 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.310+00:00",
+   "fan": "fan-072",
+   "src": "client",
+   "text": "pay res_ec4392f90d43 attempt 1: TIMEOUT after 1037 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.310+00:00",
+   "fan": "fan-072",
+   "src": "client",
+   "text": "pay res_ec4392f90d43 backing off 0.528 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.311+00:00",
+   "fan": "fan-056",
+   "src": "client",
+   "text": "pay res_6942b553d548 attempt 1: TIMEOUT after 1042 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:35.311+00:00",
+   "fan": "fan-056",
+   "src": "client",
+   "text": "pay res_6942b553d548 backing off 0.597 s"
+  },
+  {
+   "at": "2026-11-16T22:33:35.342+00:00",
+   "fan": "fan-012",
+   "src": "client",
+   "text": "pay res_e427c5d1e8c8 attempt 1: HTTP 201 in 227 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.342+00:00",
+   "fan": "fan-012",
+   "src": "client",
+   "text": "CONFIRMED order ord_b0ac0aeb1ade for seat C-13"
+  },
+  {
+   "at": "2026-11-16T22:33:35.343+00:00",
+   "fan": "fan-041",
+   "src": "client",
+   "text": "reserve A-42 attempt 2: HTTP 409 in 4 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.343+00:00",
+   "fan": "fan-041",
+   "src": "client",
+   "text": "seat A-42 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.404+00:00",
+   "fan": "fan-003",
+   "src": "client",
+   "text": "pay res_b016f434025f attempt 1: HTTP 201 in 219 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.404+00:00",
+   "fan": "fan-003",
+   "src": "client",
+   "text": "CONFIRMED order ord_5d9c9e03310a for seat C-4"
+  },
+  {
+   "at": "2026-11-16T22:33:35.453+00:00",
+   "fan": "fan-037",
+   "src": "client",
+   "text": "pay res_b6a0d3c0fd4f attempt 1: HTTP 201 in 231 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.453+00:00",
+   "fan": "fan-037",
+   "src": "client",
+   "text": "CONFIRMED order ord_472a5ea9ab9d for seat C-38"
+  },
+  {
+   "at": "2026-11-16T22:33:35.454+00:00",
+   "fan": "fan-006",
+   "src": "client",
+   "text": "pay res_94d4cf435f04 attempt 1: HTTP 201 in 231 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.454+00:00",
+   "fan": "fan-006",
+   "src": "client",
+   "text": "CONFIRMED order ord_2f54f85fe30d for seat C-7"
+  },
+  {
+   "at": "2026-11-16T22:33:35.459+00:00",
+   "fan": "fan-033",
+   "src": "client",
+   "text": "pay res_4331c047ba4e attempt 2: HTTP 409 in 27 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.459+00:00",
+   "fan": "fan-033",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.465+00:00",
+   "fan": "fan-000",
+   "src": "client",
+   "text": "pay res_79446a8803c4 attempt 2: HTTP 409 in 26 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.465+00:00",
+   "fan": "fan-000",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.467+00:00",
+   "fan": "fan-087",
+   "src": "client",
+   "text": "reserve B-38 attempt 2: HTTP 409 in 18 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.467+00:00",
+   "fan": "fan-087",
+   "src": "client",
+   "text": "seat B-38 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.470+00:00",
+   "fan": "fan-061",
+   "src": "client",
+   "text": "pay res_5aaeb9df460b attempt 2: HTTP 409 in 10 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.470+00:00",
+   "fan": "fan-061",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.517+00:00",
+   "fan": "fan-087",
+   "src": "client",
+   "text": "reserve D-38 attempt 1: HTTP 201 in 51 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.521+00:00",
+   "fan": "fan-023",
+   "src": "client",
+   "text": "pay res_4cd884f5e0c8 attempt 2: HTTP 409 in 10 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.521+00:00",
+   "fan": "fan-023",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.524+00:00",
+   "fan": "fan-085",
+   "src": "client",
+   "text": "pay res_5dda7f83afed attempt 2: HTTP 409 in 11 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.524+00:00",
+   "fan": "fan-085",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.525+00:00",
+   "fan": "fan-077",
+   "src": "client",
+   "text": "pay res_c8956929df67 attempt 2: HTTP 409 in 4 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.525+00:00",
+   "fan": "fan-077",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.608+00:00",
+   "fan": "fan-093",
+   "src": "client",
+   "text": "pay res_ede3ccc83840 attempt 2: HTTP 409 in 3 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.608+00:00",
+   "fan": "fan-093",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.651+00:00",
+   "fan": "fan-038",
+   "src": "client",
+   "text": "reserve A-39 attempt 2: HTTP 409 in 15 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.651+00:00",
+   "fan": "fan-038",
+   "src": "client",
+   "text": "seat A-39 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.654+00:00",
+   "fan": "fan-064",
+   "src": "client",
+   "text": "pay res_4442d4469166 attempt 2: HTTP 409 in 17 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.654+00:00",
+   "fan": "fan-064",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.656+00:00",
+   "fan": "fan-058",
+   "src": "client",
+   "text": "pay res_45f610751bf3 attempt 2: HTTP 409 in 17 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.656+00:00",
+   "fan": "fan-058",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.657+00:00",
+   "fan": "fan-059",
+   "src": "client",
+   "text": "reserve B-10 attempt 2: HTTP 409 in 17 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.657+00:00",
+   "fan": "fan-059",
+   "src": "client",
+   "text": "seat B-10 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.692+00:00",
+   "fan": "fan-094",
+   "src": "client",
+   "text": "pay res_4d3cff6d63f0 attempt 2: HTTP 409 in 10 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.692+00:00",
+   "fan": "fan-094",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.696+00:00",
+   "fan": "fan-052",
+   "src": "client",
+   "text": "reserve B-3 attempt 2: HTTP 409 in 13 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.696+00:00",
+   "fan": "fan-052",
+   "src": "client",
+   "text": "seat B-3 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.700+00:00",
+   "fan": "fan-080",
+   "src": "client",
+   "text": "reserve B-31 attempt 2: HTTP 409 in 16 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.700+00:00",
+   "fan": "fan-080",
+   "src": "client",
+   "text": "seat B-31 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.701+00:00",
+   "fan": "fan-059",
+   "src": "client",
+   "text": "reserve D-10 attempt 1: HTTP 201 in 45 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.705+00:00",
+   "fan": "fan-031",
+   "src": "client",
+   "text": "pay res_237dc5c68015 attempt 2: HTTP 409 in 20 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.705+00:00",
+   "fan": "fan-031",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.708+00:00",
+   "fan": "fan-068",
+   "src": "client",
+   "text": "pay res_b6791d23e5ae attempt 2: HTTP 409 in 15 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.708+00:00",
+   "fan": "fan-068",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.717+00:00",
+   "fan": "fan-096",
+   "src": "client",
+   "text": "reserve B-47 attempt 2: HTTP 409 in 23 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.717+00:00",
+   "fan": "fan-096",
+   "src": "client",
+   "text": "seat B-47 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.720+00:00",
+   "fan": "fan-087",
+   "src": "client",
+   "text": "pay res_80b2343ce730 attempt 1: HTTP 201 in 203 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.720+00:00",
+   "fan": "fan-087",
+   "src": "client",
+   "text": "CONFIRMED order ord_de2958181119 for seat D-38"
+  },
+  {
+   "at": "2026-11-16T22:33:35.733+00:00",
+   "fan": "fan-036",
+   "src": "client",
+   "text": "pay res_8ad6a7d82dd3 attempt 2: HTTP 409 in 23 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.733+00:00",
+   "fan": "fan-036",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.737+00:00",
+   "fan": "fan-016",
+   "src": "client",
+   "text": "pay res_ea3a027d95ce attempt 2: HTTP 409 in 24 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.737+00:00",
+   "fan": "fan-016",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.740+00:00",
+   "fan": "fan-063",
+   "src": "client",
+   "text": "reserve B-14 attempt 2: HTTP 409 in 45 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.740+00:00",
+   "fan": "fan-063",
+   "src": "client",
+   "text": "seat B-14 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.743+00:00",
+   "fan": "fan-042",
+   "src": "client",
+   "text": "reserve A-43 attempt 2: HTTP 409 in 28 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.743+00:00",
+   "fan": "fan-042",
+   "src": "client",
+   "text": "seat A-43 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.750+00:00",
+   "fan": "fan-071",
+   "src": "client",
+   "text": "reserve B-22 attempt 2: HTTP 409 in 24 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.750+00:00",
+   "fan": "fan-071",
+   "src": "client",
+   "text": "seat B-22 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.757+00:00",
+   "fan": "fan-082",
+   "src": "client",
+   "text": "pay res_a19a58260b45 attempt 2: HTTP 409 in 30 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.757+00:00",
+   "fan": "fan-082",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.763+00:00",
+   "fan": "fan-080",
+   "src": "client",
+   "text": "reserve D-31 attempt 1: HTTP 201 in 62 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.765+00:00",
+   "fan": "fan-052",
+   "src": "client",
+   "text": "reserve D-3 attempt 1: HTTP 201 in 69 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.770+00:00",
+   "fan": "fan-095",
+   "src": "client",
+   "text": "reserve B-46 attempt 2: HTTP 409 in 60 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.770+00:00",
+   "fan": "fan-095",
+   "src": "client",
+   "text": "seat B-46 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.774+00:00",
+   "fan": "fan-049",
+   "src": "client",
+   "text": "reserve A-50 attempt 2: HTTP 409 in 48 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.774+00:00",
+   "fan": "fan-049",
+   "src": "client",
+   "text": "seat A-50 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.781+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "reserve B-48 attempt 2: HTTP 409 in 67 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.781+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "seat B-48 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:35.787+00:00",
+   "fan": "fan-098",
+   "src": "client",
+   "text": "pay res_adad8a62650c attempt 2: HTTP 409 in 29 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.787+00:00",
+   "fan": "fan-098",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.788+00:00",
+   "fan": "fan-099",
+   "src": "client",
+   "text": "pay res_fa1ce7a57555 attempt 2: HTTP 409 in 29 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.788+00:00",
+   "fan": "fan-099",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.790+00:00",
+   "fan": "fan-096",
+   "src": "client",
+   "text": "reserve D-47 attempt 1: HTTP 201 in 73 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.791+00:00",
+   "fan": "fan-063",
+   "src": "client",
+   "text": "reserve D-14 attempt 1: HTTP 201 in 51 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.792+00:00",
+   "fan": "fan-062",
+   "src": "client",
+   "text": "pay res_52edd9b68c51 attempt 2: HTTP 409 in 48 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.792+00:00",
+   "fan": "fan-062",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.794+00:00",
+   "fan": "fan-091",
+   "src": "client",
+   "text": "pay res_152aa4ff530d attempt 2: HTTP 409 in 36 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.794+00:00",
+   "fan": "fan-091",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.828+00:00",
+   "fan": "fan-042",
+   "src": "client",
+   "text": "reserve C-43 attempt 1: HTTP 201 in 85 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.829+00:00",
+   "fan": "fan-071",
+   "src": "client",
+   "text": "reserve D-22 attempt 1: HTTP 201 in 80 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.830+00:00",
+   "fan": "fan-095",
+   "src": "client",
+   "text": "reserve D-46 attempt 1: HTTP 201 in 61 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.831+00:00",
+   "fan": "fan-049",
+   "src": "client",
+   "text": "reserve C-50 attempt 1: HTTP 201 in 58 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.835+00:00",
+   "fan": "fan-065",
+   "src": "client",
+   "text": "pay res_37a499f17527 attempt 2: HTTP 409 in 12 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.835+00:00",
+   "fan": "fan-065",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.837+00:00",
+   "fan": "fan-072",
+   "src": "client",
+   "text": "pay res_ec4392f90d43 attempt 2: HTTP 409 in 13 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.837+00:00",
+   "fan": "fan-072",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.905+00:00",
+   "fan": "fan-059",
+   "src": "client",
+   "text": "pay res_acb822aee084 attempt 1: HTTP 201 in 203 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.905+00:00",
+   "fan": "fan-059",
+   "src": "client",
+   "text": "CONFIRMED order ord_693b39f138ad for seat D-10"
+  },
+  {
+   "at": "2026-11-16T22:33:35.907+00:00",
+   "fan": "fan-056",
+   "src": "client",
+   "text": "pay res_6942b553d548 attempt 2: HTTP 409 in 4 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.907+00:00",
+   "fan": "fan-056",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:35.989+00:00",
+   "fan": "fan-080",
+   "src": "client",
+   "text": "pay res_6e5332a96de2 attempt 1: HTTP 201 in 227 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.989+00:00",
+   "fan": "fan-080",
+   "src": "client",
+   "text": "CONFIRMED order ord_c5da101e7cb6 for seat D-31"
+  },
+  {
+   "at": "2026-11-16T22:33:35.990+00:00",
+   "fan": "fan-052",
+   "src": "client",
+   "text": "pay res_2e18c820eb9f attempt 1: HTTP 201 in 226 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.990+00:00",
+   "fan": "fan-052",
+   "src": "client",
+   "text": "CONFIRMED order ord_81f398cb4be3 for seat D-3"
+  },
+  {
+   "at": "2026-11-16T22:33:35.992+00:00",
+   "fan": "fan-063",
+   "src": "client",
+   "text": "pay res_2857df440852 attempt 1: HTTP 201 in 201 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:35.992+00:00",
+   "fan": "fan-063",
+   "src": "client",
+   "text": "CONFIRMED order ord_ea192512e564 for seat D-14"
+  },
+  {
+   "at": "2026-11-16T22:33:36.045+00:00",
+   "fan": "fan-042",
+   "src": "client",
+   "text": "pay res_e3788d52e79d attempt 1: HTTP 201 in 217 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:36.045+00:00",
+   "fan": "fan-042",
+   "src": "client",
+   "text": "CONFIRMED order ord_73ac87d8b8d9 for seat C-43"
+  },
+  {
+   "at": "2026-11-16T22:33:36.137+00:00",
+   "fan": "fan-019",
+   "src": "client",
+   "text": "pay res_f2a39f2ac39d attempt 1: TIMEOUT after 1025 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.137+00:00",
+   "fan": "fan-019",
+   "src": "client",
+   "text": "pay res_f2a39f2ac39d backing off 0.589 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.187+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "reserve C-46 attempt 1: TIMEOUT after 1028 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.188+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "reserve C-46 backing off 0.536 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.189+00:00",
+   "fan": "fan-051",
+   "src": "client",
+   "text": "reserve D-2 attempt 1: TIMEOUT after 1014 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.189+00:00",
+   "fan": "fan-051",
+   "src": "client",
+   "text": "reserve D-2 backing off 0.536 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.263+00:00",
+   "fan": "fan-043",
+   "src": "client",
+   "text": "pay res_5d2d151510f7 attempt 1: TIMEOUT after 1026 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.263+00:00",
+   "fan": "fan-043",
+   "src": "client",
+   "text": "pay res_5d2d151510f7 backing off 0.522 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.264+00:00",
+   "fan": "fan-024",
+   "src": "client",
+   "text": "pay res_9905a4e51667 attempt 1: TIMEOUT after 1039 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.264+00:00",
+   "fan": "fan-024",
+   "src": "client",
+   "text": "pay res_9905a4e51667 backing off 0.538 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.265+00:00",
+   "fan": "fan-014",
+   "src": "client",
+   "text": "pay res_31688d4351df attempt 1: TIMEOUT after 1041 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.265+00:00",
+   "fan": "fan-014",
+   "src": "client",
+   "text": "pay res_31688d4351df backing off 0.511 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.294+00:00",
+   "fan": "fan-050",
+   "src": "client",
+   "text": "reserve D-1 attempt 1: TIMEOUT after 1012 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.294+00:00",
+   "fan": "fan-050",
+   "src": "client",
+   "text": "reserve D-1 backing off 0.532 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.358+00:00",
+   "fan": "fan-041",
+   "src": "client",
+   "text": "reserve C-42 attempt 1: TIMEOUT after 1014 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.358+00:00",
+   "fan": "fan-041",
+   "src": "client",
+   "text": "reserve C-42 backing off 0.523 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.658+00:00",
+   "fan": "fan-038",
+   "src": "client",
+   "text": "reserve C-39 attempt 1: TIMEOUT after 1007 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.658+00:00",
+   "fan": "fan-038",
+   "src": "client",
+   "text": "reserve C-39 backing off 0.519 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.745+00:00",
+   "fan": "fan-051",
+   "src": "client",
+   "text": "reserve D-2 attempt 2: HTTP 409 in 13 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:36.745+00:00",
+   "fan": "fan-051",
+   "src": "client",
+   "text": "seat D-2 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:36.747+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "reserve C-46 attempt 2: HTTP 409 in 11 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:36.747+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "seat C-46 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:36.749+00:00",
+   "fan": "fan-019",
+   "src": "client",
+   "text": "pay res_f2a39f2ac39d attempt 2: HTTP 409 in 10 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:36.749+00:00",
+   "fan": "fan-019",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:36.781+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "reserve D-48 attempt 1: TIMEOUT after 1001 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.781+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "reserve D-48 backing off 0.528 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.784+00:00",
+   "fan": "fan-014",
+   "src": "client",
+   "text": "pay res_31688d4351df attempt 2: HTTP 409 in 5 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:36.784+00:00",
+   "fan": "fan-014",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:36.785+00:00",
+   "fan": "fan-043",
+   "src": "client",
+   "text": "pay res_5d2d151510f7 attempt 2: HTTP 409 in 5 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:36.785+00:00",
+   "fan": "fan-043",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:36.813+00:00",
+   "fan": "fan-096",
+   "src": "client",
+   "text": "pay res_20554457a47f attempt 1: TIMEOUT after 1023 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.813+00:00",
+   "fan": "fan-096",
+   "src": "client",
+   "text": "pay res_20554457a47f backing off 0.542 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.814+00:00",
+   "fan": "fan-051",
+   "src": "client",
+   "text": "reserve F-2 attempt 1: HTTP 201 in 70 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:36.815+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "reserve E-46 attempt 1: HTTP 201 in 69 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:36.818+00:00",
+   "fan": "fan-024",
+   "src": "client",
+   "text": "pay res_9905a4e51667 attempt 2: HTTP 409 in 7 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:36.818+00:00",
+   "fan": "fan-024",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:36.821+00:00",
+   "fan": "fan-050",
+   "src": "client",
+   "text": "reserve D-1 attempt 2: HTTP 409 in 3 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:36.821+00:00",
+   "fan": "fan-050",
+   "src": "client",
+   "text": "seat D-1 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:36.843+00:00",
+   "fan": "fan-049",
+   "src": "client",
+   "text": "pay res_76ad5c89616d attempt 1: TIMEOUT after 1012 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.843+00:00",
+   "fan": "fan-049",
+   "src": "client",
+   "text": "pay res_76ad5c89616d backing off 0.591 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.844+00:00",
+   "fan": "fan-095",
+   "src": "client",
+   "text": "pay res_65b25ac468aa attempt 1: TIMEOUT after 1013 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.844+00:00",
+   "fan": "fan-095",
+   "src": "client",
+   "text": "pay res_65b25ac468aa backing off 0.574 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.844+00:00",
+   "fan": "fan-071",
+   "src": "client",
+   "text": "pay res_e4c599e94f8d attempt 1: TIMEOUT after 1015 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:36.844+00:00",
+   "fan": "fan-071",
+   "src": "client",
+   "text": "pay res_e4c599e94f8d backing off 0.544 s"
+  },
+  {
+   "at": "2026-11-16T22:33:36.892+00:00",
+   "fan": "fan-050",
+   "src": "client",
+   "text": "reserve F-1 attempt 1: HTTP 201 in 71 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:36.894+00:00",
+   "fan": "fan-041",
+   "src": "client",
+   "text": "reserve C-42 attempt 2: HTTP 409 in 5 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:36.894+00:00",
+   "fan": "fan-041",
+   "src": "client",
+   "text": "seat C-42 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:36.973+00:00",
+   "fan": "fan-041",
+   "src": "client",
+   "text": "reserve E-42 attempt 1: HTTP 201 in 79 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:37.031+00:00",
+   "fan": "fan-051",
+   "src": "client",
+   "text": "pay res_4ebc50453548 attempt 1: HTTP 201 in 216 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:37.031+00:00",
+   "fan": "fan-051",
+   "src": "client",
+   "text": "CONFIRMED order ord_dfd6ade8fc6d for seat F-2"
+  },
+  {
+   "at": "2026-11-16T22:33:37.094+00:00",
+   "fan": "fan-050",
+   "src": "client",
+   "text": "pay res_6883ae3c639f attempt 1: HTTP 201 in 202 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:37.094+00:00",
+   "fan": "fan-050",
+   "src": "client",
+   "text": "CONFIRMED order ord_d461271efdc3 for seat F-1"
+  },
+  {
+   "at": "2026-11-16T22:33:37.191+00:00",
+   "fan": "fan-041",
+   "src": "client",
+   "text": "pay res_d34deb8fe08f attempt 1: HTTP 201 in 218 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:37.191+00:00",
+   "fan": "fan-041",
+   "src": "client",
+   "text": "CONFIRMED order ord_64024497381c for seat E-42"
+  },
+  {
+   "at": "2026-11-16T22:33:37.192+00:00",
+   "fan": "fan-038",
+   "src": "client",
+   "text": "reserve C-39 attempt 2: HTTP 409 in 6 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:37.192+00:00",
+   "fan": "fan-038",
+   "src": "client",
+   "text": "seat C-39 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:37.268+00:00",
+   "fan": "fan-038",
+   "src": "client",
+   "text": "reserve E-39 attempt 1: HTTP 201 in 75 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:37.329+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "reserve D-48 attempt 2: HTTP 409 in 4 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:37.329+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "seat D-48 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:37.379+00:00",
+   "fan": "fan-096",
+   "src": "client",
+   "text": "pay res_20554457a47f attempt 2: HTTP 409 in 6 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:37.379+00:00",
+   "fan": "fan-096",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:37.380+00:00",
+   "fan": "fan-071",
+   "src": "client",
+   "text": "pay res_e4c599e94f8d attempt 2: HTTP 409 in 5 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:37.380+00:00",
+   "fan": "fan-071",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:37.425+00:00",
+   "fan": "fan-095",
+   "src": "client",
+   "text": "pay res_65b25ac468aa attempt 2: HTTP 409 in 4 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:37.425+00:00",
+   "fan": "fan-095",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:37.426+00:00",
+   "fan": "fan-049",
+   "src": "client",
+   "text": "pay res_76ad5c89616d attempt 2: HTTP 409 in 4 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:37.426+00:00",
+   "fan": "fan-049",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:37.486+00:00",
+   "fan": "fan-038",
+   "src": "client",
+   "text": "pay res_fd6be71168aa attempt 1: HTTP 201 in 218 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:37.486+00:00",
+   "fan": "fan-038",
+   "src": "client",
+   "text": "CONFIRMED order ord_c4f5a0da0df6 for seat E-39"
+  },
+  {
+   "at": "2026-11-16T22:33:37.831+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "pay res_524ff8299f4b attempt 1: TIMEOUT after 1016 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:37.831+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "pay res_524ff8299f4b backing off 0.543 s"
+  },
+  {
+   "at": "2026-11-16T22:33:38.347+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "reserve F-48 attempt 1: TIMEOUT after 1018 ms (ReadTimeout)"
+  },
+  {
+   "at": "2026-11-16T22:33:38.347+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "reserve F-48 backing off 0.508 s"
+  },
+  {
+   "at": "2026-11-16T22:33:38.380+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "pay res_524ff8299f4b attempt 2: HTTP 409 in 3 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:38.380+00:00",
+   "fan": "fan-045",
+   "src": "client",
+   "text": "GAVE UP: pay answered 409"
+  },
+  {
+   "at": "2026-11-16T22:33:38.849+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "reserve F-48 attempt 2: HTTP 409 in 3 ms"
+  },
+  {
+   "at": "2026-11-16T22:33:38.849+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "seat F-48 taken, trying the next seat"
+  },
+  {
+   "at": "2026-11-16T22:33:38.849+00:00",
+   "fan": "fan-097",
+   "src": "client",
+   "text": "GAVE UP: could not reserve"
+  }
+ ],
+ "report": {
+  "events": [
+   {
+    "event_id": 1,
+    "capacity": 120,
+    "orders_confirmed": 0,
+    "unique_seats_sold": 0,
+    "duplicate_sales": 0,
+    "oversold_seats": [],
+    "seats_unavailable": 0,
+    "retried_duplicates": 0,
+    "fans_with_duplicate_holds": 0,
+    "fans_with_duplicate_orders": 0
+   },
+   {
+    "event_id": 2,
+    "capacity": 500,
+    "orders_confirmed": 0,
+    "unique_seats_sold": 0,
+    "duplicate_sales": 0,
+    "oversold_seats": [],
+    "seats_unavailable": 0,
+    "retried_duplicates": 0,
+    "fans_with_duplicate_holds": 0,
+    "fans_with_duplicate_orders": 0
+   },
+   {
+    "event_id": 3,
+    "capacity": 1000,
+    "orders_confirmed": 99,
+    "unique_seats_sold": 99,
+    "duplicate_sales": 0,
+    "oversold_seats": [],
+    "seats_unavailable": 130,
+    "retried_duplicates": 30,
+    "fans_with_duplicate_holds": 24,
+    "fans_with_duplicate_orders": 0
+   }
+  ],
+  "duplicate_sales_total": 0,
+  "retried_duplicates_total": 30,
+  "responses_dropped_after_commit": 66,
+  "dropped_responses": [
+   {
+    "at": "2026-11-16T22:33:33.536+00:00",
+    "path": "/reservations",
+    "fan": "fan-003",
+    "id": "res_9b53076d830a",
+    "seat_id": "A-4"
+   },
+   {
+    "at": "2026-11-16T22:33:33.552+00:00",
+    "path": "/reservations",
+    "fan": "fan-006",
+    "id": "res_3f848253028a",
+    "seat_id": "A-7"
+   },
+   {
+    "at": "2026-11-16T22:33:33.553+00:00",
+    "path": "/reservations",
+    "fan": "fan-012",
+    "id": "res_0117cdfd76bd",
+    "seat_id": "A-13"
+   },
+   {
+    "at": "2026-11-16T22:33:33.574+00:00",
+    "path": "/reservations",
+    "fan": "fan-019",
+    "id": "res_02fef3774b2e",
+    "seat_id": "A-20"
+   },
+   {
+    "at": "2026-11-16T22:33:33.575+00:00",
+    "path": "/reservations",
+    "fan": "fan-014",
+    "id": "res_62cf4f6b886a",
+    "seat_id": "A-15"
+   },
+   {
+    "at": "2026-11-16T22:33:33.591+00:00",
+    "path": "/reservations",
+    "fan": "fan-024",
+    "id": "res_3bd7b67cc11c",
+    "seat_id": "A-25"
+   },
+   {
+    "at": "2026-11-16T22:33:33.617+00:00",
+    "path": "/reservations",
+    "fan": "fan-037",
+    "id": "res_465880349ca6",
+    "seat_id": "A-38"
+   },
+   {
+    "at": "2026-11-16T22:33:33.649+00:00",
+    "path": "/reservations",
+    "fan": "fan-043",
+    "id": "res_6a1f1811b7ef",
+    "seat_id": "A-44"
+   },
+   {
+    "at": "2026-11-16T22:33:33.649+00:00",
+    "path": "/reservations",
+    "fan": "fan-051",
+    "id": "res_dd725c38fb44",
+    "seat_id": "B-2"
+   },
+   {
+    "at": "2026-11-16T22:33:33.660+00:00",
+    "path": "/reservations",
+    "fan": "fan-045",
+    "id": "res_ad4860c267d9",
+    "seat_id": "A-46"
+   },
+   {
+    "at": "2026-11-16T22:33:33.726+00:00",
+    "path": "/reservations",
+    "fan": "fan-050",
+    "id": "res_473a624f21ee",
+    "seat_id": "B-1"
+   },
+   {
+    "at": "2026-11-16T22:33:33.805+00:00",
+    "path": "/reservations",
+    "fan": "fan-041",
+    "id": "res_3d631d0504a2",
+    "seat_id": "A-42"
+   },
+   {
+    "at": "2026-11-16T22:33:33.819+00:00",
+    "path": "/orders",
+    "fan": "fan-020",
+    "id": "ord_efeb76bce2ac",
+    "seat_id": "A-21"
+   },
+   {
+    "at": "2026-11-16T22:33:33.852+00:00",
+    "path": "/orders",
+    "fan": "fan-022",
+    "id": "ord_aebf3d64ead6",
+    "seat_id": "A-23"
+   },
+   {
+    "at": "2026-11-16T22:33:33.867+00:00",
+    "path": "/orders",
+    "fan": "fan-046",
+    "id": "ord_6383c2f2ec0e",
+    "seat_id": "A-47"
+   },
+   {
+    "at": "2026-11-16T22:33:33.868+00:00",
+    "path": "/orders",
+    "fan": "fan-047",
+    "id": "ord_472d0f61d6f2",
+    "seat_id": "A-48"
+   },
+   {
+    "at": "2026-11-16T22:33:33.896+00:00",
+    "path": "/reservations",
+    "fan": "fan-087",
+    "id": "res_7265bf4a6033",
+    "seat_id": "B-38"
+   },
+   {
+    "at": "2026-11-16T22:33:34.022+00:00",
+    "path": "/orders",
+    "fan": "fan-033",
+    "id": "ord_aca0fcdd57f5",
+    "seat_id": "A-34"
+   },
+   {
+    "at": "2026-11-16T22:33:34.037+00:00",
+    "path": "/orders",
+    "fan": "fan-000",
+    "id": "ord_e62a0325dc77",
+    "seat_id": "A-1"
+   },
+   {
+    "at": "2026-11-16T22:33:34.084+00:00",
+    "path": "/orders",
+    "fan": "fan-061",
+    "id": "ord_5f7914f41926",
+    "seat_id": "B-12"
+   },
+   {
+    "at": "2026-11-16T22:33:34.100+00:00",
+    "path": "/reservations",
+    "fan": "fan-038",
+    "id": "res_615d55a53070",
+    "seat_id": "A-39"
+   },
+   {
+    "at": "2026-11-16T22:33:34.114+00:00",
+    "path": "/orders",
+    "fan": "fan-077",
+    "id": "ord_bfeed161916b",
+    "seat_id": "B-28"
+   },
+   {
+    "at": "2026-11-16T22:33:34.133+00:00",
+    "path": "/orders",
+    "fan": "fan-085",
+    "id": "ord_943bb3c9aca5",
+    "seat_id": "B-36"
+   },
+   {
+    "at": "2026-11-16T22:33:34.134+00:00",
+    "path": "/orders",
+    "fan": "fan-023",
+    "id": "ord_16561a3123d5",
+    "seat_id": "A-24"
+   },
+   {
+    "at": "2026-11-16T22:33:34.145+00:00",
+    "path": "/reservations",
+    "fan": "fan-052",
+    "id": "res_ebcc31347177",
+    "seat_id": "B-3"
+   },
+   {
+    "at": "2026-11-16T22:33:34.161+00:00",
+    "path": "/reservations",
+    "fan": "fan-095",
+    "id": "res_409ffd151a5f",
+    "seat_id": "B-46"
+   },
+   {
+    "at": "2026-11-16T22:33:34.161+00:00",
+    "path": "/orders",
+    "fan": "fan-093",
+    "id": "ord_3858af6978a6",
+    "seat_id": "B-44"
+   },
+   {
+    "at": "2026-11-16T22:33:34.177+00:00",
+    "path": "/reservations",
+    "fan": "fan-042",
+    "id": "res_d0bf1e3fb411",
+    "seat_id": "A-43"
+   },
+   {
+    "at": "2026-11-16T22:33:34.196+00:00",
+    "path": "/reservations",
+    "fan": "fan-080",
+    "id": "res_c3aa7102fb21",
+    "seat_id": "B-31"
+   },
+   {
+    "at": "2026-11-16T22:33:34.196+00:00",
+    "path": "/reservations",
+    "fan": "fan-059",
+    "id": "res_44687d67ec75",
+    "seat_id": "B-10"
+   },
+   {
+    "at": "2026-11-16T22:33:34.223+00:00",
+    "path": "/reservations",
+    "fan": "fan-071",
+    "id": "res_58368f589442",
+    "seat_id": "B-22"
+   },
+   {
+    "at": "2026-11-16T22:33:34.224+00:00",
+    "path": "/reservations",
+    "fan": "fan-063",
+    "id": "res_2b1279873ae8",
+    "seat_id": "B-14"
+   },
+   {
+    "at": "2026-11-16T22:33:34.224+00:00",
+    "path": "/reservations",
+    "fan": "fan-096",
+    "id": "res_1f7bc79c1e08",
+    "seat_id": "B-47"
+   },
+   {
+    "at": "2026-11-16T22:33:34.224+00:00",
+    "path": "/reservations",
+    "fan": "fan-049",
+    "id": "res_dc976b83fe1a",
+    "seat_id": "A-50"
+   },
+   {
+    "at": "2026-11-16T22:33:34.259+00:00",
+    "path": "/reservations",
+    "fan": "fan-097",
+    "id": "res_1f17758ed4ad",
+    "seat_id": "B-48"
+   },
+   {
+    "at": "2026-11-16T22:33:34.321+00:00",
+    "path": "/orders",
+    "fan": "fan-058",
+    "id": "ord_1448fee643ef",
+    "seat_id": "B-9"
+   },
+   {
+    "at": "2026-11-16T22:33:34.322+00:00",
+    "path": "/orders",
+    "fan": "fan-064",
+    "id": "ord_73feda67a4e1",
+    "seat_id": "B-15"
+   },
+   {
+    "at": "2026-11-16T22:33:34.322+00:00",
+    "path": "/orders",
+    "fan": "fan-031",
+    "id": "ord_8fa6b46633e8",
+    "seat_id": "A-32"
+   },
+   {
+    "at": "2026-11-16T22:33:34.323+00:00",
+    "path": "/orders",
+    "fan": "fan-036",
+    "id": "ord_b06cecbe2043",
+    "seat_id": "A-37"
+   },
+   {
+    "at": "2026-11-16T22:33:34.323+00:00",
+    "path": "/orders",
+    "fan": "fan-094",
+    "id": "ord_a7937e74bb55",
+    "seat_id": "B-45"
+   },
+   {
+    "at": "2026-11-16T22:33:34.353+00:00",
+    "path": "/orders",
+    "fan": "fan-062",
+    "id": "ord_5abce4795e6d",
+    "seat_id": "B-13"
+   },
+   {
+    "at": "2026-11-16T22:33:34.383+00:00",
+    "path": "/orders",
+    "fan": "fan-068",
+    "id": "ord_4eb565f14841",
+    "seat_id": "B-19"
+   },
+   {
+    "at": "2026-11-16T22:33:34.384+00:00",
+    "path": "/orders",
+    "fan": "fan-016",
+    "id": "ord_e884074d15ca",
+    "seat_id": "A-17"
+   },
+   {
+    "at": "2026-11-16T22:33:34.384+00:00",
+    "path": "/orders",
+    "fan": "fan-098",
+    "id": "ord_867654af4b90",
+    "seat_id": "B-49"
+   },
+   {
+    "at": "2026-11-16T22:33:34.385+00:00",
+    "path": "/orders",
+    "fan": "fan-091",
+    "id": "ord_d1f72ccf25d4",
+    "seat_id": "B-42"
+   },
+   {
+    "at": "2026-11-16T22:33:34.417+00:00",
+    "path": "/orders",
+    "fan": "fan-082",
+    "id": "ord_2f6c33a13575",
+    "seat_id": "B-33"
+   },
+   {
+    "at": "2026-11-16T22:33:34.417+00:00",
+    "path": "/orders",
+    "fan": "fan-099",
+    "id": "ord_47b91e1878b9",
+    "seat_id": "B-50"
+   },
+   {
+    "at": "2026-11-16T22:33:34.493+00:00",
+    "path": "/orders",
+    "fan": "fan-065",
+    "id": "ord_d80114dfbe19",
+    "seat_id": "B-16"
+   },
+   {
+    "at": "2026-11-16T22:33:34.495+00:00",
+    "path": "/orders",
+    "fan": "fan-056",
+    "id": "ord_ac14cecb6ba3",
+    "seat_id": "B-7"
+   },
+   {
+    "at": "2026-11-16T22:33:34.495+00:00",
+    "path": "/orders",
+    "fan": "fan-072",
+    "id": "ord_b2a80bdf1fad",
+    "seat_id": "B-23"
+   },
+   {
+    "at": "2026-11-16T22:33:35.214+00:00",
+    "path": "/reservations",
+    "fan": "fan-045",
+    "id": "res_bf79d28f5a1e",
+    "seat_id": "C-46"
+   },
+   {
+    "at": "2026-11-16T22:33:35.230+00:00",
+    "path": "/reservations",
+    "fan": "fan-051",
+    "id": "res_7063a9dd0955",
+    "seat_id": "D-2"
+   },
+   {
+    "at": "2026-11-16T22:33:35.309+00:00",
+    "path": "/orders",
+    "fan": "fan-019",
+    "id": "ord_736deba6352d",
+    "seat_id": "C-20"
+   },
+   {
+    "at": "2026-11-16T22:33:35.339+00:00",
+    "path": "/reservations",
+    "fan": "fan-050",
+    "id": "res_c67483180b81",
+    "seat_id": "D-1"
+   },
+   {
+    "at": "2026-11-16T22:33:35.402+00:00",
+    "path": "/reservations",
+    "fan": "fan-041",
+    "id": "res_68d7362664cd",
+    "seat_id": "C-42"
+   },
+   {
+    "at": "2026-11-16T22:33:35.434+00:00",
+    "path": "/orders",
+    "fan": "fan-024",
+    "id": "ord_c1c39ba412ca",
+    "seat_id": "C-25"
+   },
+   {
+    "at": "2026-11-16T22:33:35.436+00:00",
+    "path": "/orders",
+    "fan": "fan-043",
+    "id": "ord_fd5ef6f0f33f",
+    "seat_id": "C-44"
+   },
+   {
+    "at": "2026-11-16T22:33:35.437+00:00",
+    "path": "/orders",
+    "fan": "fan-014",
+    "id": "ord_aa73877b1bb5",
+    "seat_id": "C-15"
+   },
+   {
+    "at": "2026-11-16T22:33:35.693+00:00",
+    "path": "/reservations",
+    "fan": "fan-038",
+    "id": "res_521f1f822b4f",
+    "seat_id": "C-39"
+   },
+   {
+    "at": "2026-11-16T22:33:35.824+00:00",
+    "path": "/reservations",
+    "fan": "fan-097",
+    "id": "res_2f84ac3cb646",
+    "seat_id": "D-48"
+   },
+   {
+    "at": "2026-11-16T22:33:35.983+00:00",
+    "path": "/orders",
+    "fan": "fan-096",
+    "id": "ord_b32a365fb74c",
+    "seat_id": "D-47"
+   },
+   {
+    "at": "2026-11-16T22:33:36.043+00:00",
+    "path": "/orders",
+    "fan": "fan-049",
+    "id": "ord_0eee4a4aa813",
+    "seat_id": "C-50"
+   },
+   {
+    "at": "2026-11-16T22:33:36.044+00:00",
+    "path": "/orders",
+    "fan": "fan-071",
+    "id": "ord_3e884193a519",
+    "seat_id": "D-22"
+   },
+   {
+    "at": "2026-11-16T22:33:36.044+00:00",
+    "path": "/orders",
+    "fan": "fan-095",
+    "id": "ord_d15955e0d0bf",
+    "seat_id": "D-46"
+   },
+   {
+    "at": "2026-11-16T22:33:37.029+00:00",
+    "path": "/orders",
+    "fan": "fan-045",
+    "id": "ord_893f751d9a73",
+    "seat_id": "E-46"
+   },
+   {
+    "at": "2026-11-16T22:33:37.378+00:00",
+    "path": "/reservations",
+    "fan": "fan-097",
+    "id": "res_e9fd23e2df2c",
+    "seat_id": "F-48"
+   }
+  ]
+ }
+}

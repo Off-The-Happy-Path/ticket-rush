@@ -11,6 +11,7 @@ The system under test is a concert-ticketing API: tickets go on sale at 10:00 an
 | [`api-tests-postman/`](api-tests-postman/) | The video 3 test as a Postman collection, run with Newman |
 | [`api-tests-playwright/`](api-tests-playwright/) | The video 3 test with Playwright (TypeScript) |
 | [`api-test-framework/`](api-test-framework/) | The video 6 API test framework (Java, TestNG, REST Assured): env config, helpers, invariants |
+| [`retry-storm/`](retry-storm/) | The video 7 retry-storm harness: 100 fans with a retry-on-timeout client (Python, httpx) |
 | [`load-tests/`](load-tests/) | Locust load tests: normal traffic and the ticket rush |
 
 ```bash
@@ -27,6 +28,7 @@ Each video links to a git tag (`v01-locust`, `v02-...`) with the exact code show
 | The 10:00 Ticket Sale: Load Testing a Traffic Spike | [`v04-spike`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v04-spike) |
 | Five Load-Testing Mistakes That Give You Fake-Good Results | [`v05-mistakes`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v05-mistakes) |
 | The API Test Framework I'd Build From Scratch Today | [`v06-api-test-framework`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v06-api-test-framework) |
+| A Timeout Isn't a Failure. Your Retries Think It Is. | [`v07-retry-storm`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v07-retry-storm) |
 
 Everything here is fictional: the concerts, venues and traffic numbers.
 
