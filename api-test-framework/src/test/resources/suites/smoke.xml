@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="smoke">
+    <test name="Smoke">
+        <groups><run><include name="smoke"/></run></groups>
+        <packages><package name="dev.ticketrush.fw.tests.smoke"/></packages>
+    </test>
+</suite>

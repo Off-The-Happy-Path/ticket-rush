@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="concurrency">
+    <test name="Concurrency">
+        <groups><run><include name="concurrency"/></run></groups>
+        <packages><package name="dev.ticketrush.fw.tests.concurrency"/></packages>
+    </test>
+</suite>

@@ -10,6 +10,7 @@ The system under test is a concert-ticketing API: tickets go on sale at 10:00 an
 | [`api-tests-java/`](api-tests-java/) | Functional API tests (Java, TestNG, REST Assured) |
 | [`api-tests-postman/`](api-tests-postman/) | The video 3 test as a Postman collection, run with Newman |
 | [`api-tests-playwright/`](api-tests-playwright/) | The video 3 test with Playwright (TypeScript) |
+| [`api-test-framework/`](api-test-framework/) | The video 6 API test framework (Java, TestNG, REST Assured): env config, helpers, invariants |
 | [`load-tests/`](load-tests/) | Locust load tests: normal traffic and the ticket rush |
 
 ```bash
@@ -25,6 +26,7 @@ Each video links to a git tag (`v01-locust`, `v02-...`) with the exact code show
 | REST Assured vs Postman vs Playwright: Which to Learn in 2027 | [`v03-three-tools`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v03-three-tools) |
 | The 10:00 Ticket Sale: Load Testing a Traffic Spike | [`v04-spike`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v04-spike) |
 | Five Load-Testing Mistakes That Give You Fake-Good Results | [`v05-mistakes`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v05-mistakes) |
+| The API Test Framework I'd Build From Scratch Today | [`v06-api-test-framework`](https://github.com/Off-The-Happy-Path/ticket-rush/tree/v06-api-test-framework) |
 
 Everything here is fictional: the concerts, venues and traffic numbers.
 

@@ -1,0 +1,4 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="flake: v1 fixed sleep x20">
+    <test name="FixedSleep"><classes><class name="dev.ticketrush.fw.v1.FixedSleepHoldFlakeTest"/></classes></test>
+</suite>

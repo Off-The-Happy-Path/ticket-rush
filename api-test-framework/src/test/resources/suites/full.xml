@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ticket-rush framework suite">
+    <test name="All">
+        <packages>
+            <package name="dev.ticketrush.fw.tests.smoke"/>
+            <package name="dev.ticketrush.fw.tests.api"/>
+            <package name="dev.ticketrush.fw.tests.concurrency"/>
+        </packages>
+    </test>
+</suite>

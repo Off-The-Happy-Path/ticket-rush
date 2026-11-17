@@ -1,0 +1,4 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="v1 copy-paste">
+    <test name="V1"><classes><class name="dev.ticketrush.fw.v1.ReservationsV1Test"/></classes></test>
+</suite>

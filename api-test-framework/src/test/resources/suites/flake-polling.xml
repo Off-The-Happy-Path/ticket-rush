@@ -1,0 +1,4 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="flake: polling x20">
+    <test name="Polling"><classes><class name="dev.ticketrush.fw.tests.flake.PollingHoldFlakeTest"/></classes></test>
+</suite>
