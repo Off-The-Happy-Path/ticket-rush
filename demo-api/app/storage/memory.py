@@ -49,6 +49,9 @@ class InMemoryStore:
     async def save_order(self, order: Order) -> None:
         self.orders[order.id] = order
 
+    async def list_reservations(self, event_id: int) -> list[Reservation]:
+        return [r for r in self.reservations.values() if r.event_id == event_id]
+
     async def list_orders(self, event_id: int) -> list[Order]:
         return [order for order in self.orders.values() if order.event_id == event_id]
 

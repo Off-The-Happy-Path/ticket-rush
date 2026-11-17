@@ -126,8 +126,15 @@ class EventReport(BaseModel):
     unique_seats_sold: int              # different seats with at least one order
     duplicate_sales: int                # orders for a seat someone already bought
     oversold_seats: list[OversoldSeat]  # seats with more than one order
+    seats_unavailable: int = 0          # seats sold or currently held (not bookable by anyone else)
+    retried_duplicates: int = 0         # extra holds + extra orders by a fan who already had one for this event
+    fans_with_duplicate_holds: int = 0  # fans holding 2+ seats for this event
+    fans_with_duplicate_orders: int = 0 # fans with 2+ confirmed orders for this event
 
 
 class Report(BaseModel):
     events: list[EventReport]
     duplicate_sales_total: int
+    retried_duplicates_total: int = 0
+    responses_dropped_after_commit: int = 0     # only non-zero when DROP_RESPONSE_AFTER_COMMIT_PCT > 0
+    dropped_responses: list[dict] = []          # every write that committed but never answered

@@ -31,6 +31,9 @@ Set these as environment variables before starting the server.
 | `HOLD_SECONDS` | `300` | How long a reservation holds a seat |
 | `DB_LATENCY_MS` | `50` | Simulated database round trip |
 | `PAYMENT_LATENCY_MS` | `200` | Simulated payment call |
+| `DROP_RESPONSE_AFTER_COMMIT_PCT` | `0` | 0-100. For this % of successful `POST /reservations` and `POST /orders`, the write commits but the response is never sent (the client times out). Needs `ADMIN_ENABLED=true` to see the effect in `/admin/report` |
+| `DROP_SEED` | `0` | Makes the dropped requests reproducible |
+| `DROP_HOLD_SECONDS` | `5` | How long a dropped response is held before the server gives up |
 
 PowerShell:
 
@@ -57,6 +60,8 @@ OVERSELL_BUG=true ADMIN_ENABLED=true uvicorn app.main:app --port 8000 --log-leve
 | `POST /admin/reset` | Fresh data. Body `{"sale_opens_in_seconds": 60}` delays the sale |
 | `GET /admin/report` | Orders vs seats, and every seat sold more than once |
 | `POST /admin/freeze?seconds=3` | Blocks the whole API for that long, like a blocking call in async code |
+
+With the drop toggle on, `/admin/report` also shows `retried_duplicates` (extra holds and orders by a fan who already had one for the event), `fans_with_duplicate_holds`, `seats_unavailable` and every dropped response.
 
 The report always adds up: `orders_confirmed = unique_seats_sold + duplicate_sales`. A seat sold three times counts as one oversold seat and two duplicate sales.
 

@@ -4,6 +4,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from app.config import settings
+from app.faults import DropResponseAfterCommit
 from app.errors import AppError, app_error_handler
 from app.routes import admin, events, health, orders, reservations
 from app.seed import load_seed
@@ -18,6 +19,9 @@ async def lifespan(app: FastAPI):
 def create_app() -> FastAPI:
     app = FastAPI(title="ticket-rush", version="0.1.0", lifespan=lifespan)
     app.add_exception_handler(AppError, app_error_handler)
+
+    if settings.drop_response_after_commit_pct > 0:
+        app.add_middleware(DropResponseAfterCommit)
 
     app.include_router(events.router)
     app.include_router(reservations.router)
